@@ -11,10 +11,10 @@
         //Métodos
 
         //Método Construtor
-        public function __contruct ($matriculaUsuario, $cpfUsuario, $dataNascimento) {
+        public function __construct ($matriculaUsuario, $cpfUsuario, $dataNascimentoUsuario) {
             $this->setMatriculaUsuario ($matriculaUsuario);
             $this->setCpfUsuario ($cpfUsuario);
-            $this->setDataNascimento ($dataNascimento);
+            $this->setDataNascimentoUsuario ($dataNascimentoUsuario);
         }//Fim do método Construtor
 
         //Método setMatriculaUsuario ()
@@ -34,7 +34,7 @@
 
         //Método getCpfUsuario ()
         public function getCpfUsuario () {
-            return $this->CpfUsuario;
+            return $this->cpfUsuario;
         }//Fim do Método getCpfUsuario ()
 
         //Método setDataNascimentoUsuario ()
