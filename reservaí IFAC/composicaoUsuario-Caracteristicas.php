@@ -15,6 +15,4 @@
     echo 'Matrícula: ' . $u1->getMatriculaUsuario() . '<br>';
     echo 'CPF: ' . $u1->getCpfUsuario() . '<br>';
     echo 'Nascimento: ' . $u1->getDataNascimentoUsuario() . '<br>';
-
-    
 ?>

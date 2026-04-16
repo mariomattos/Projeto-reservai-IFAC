@@ -81,6 +81,5 @@
         public function getCondicao () {
             return $this->condicao;
         }//Fim do método getCondicao ()
-
     }//Fim da Classe Manutencao
 ?>

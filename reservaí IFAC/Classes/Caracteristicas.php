@@ -60,6 +60,5 @@
         public function getQuantidade () {
             return $this->quantidade;
         }//Fim do Método getQuantidade ()
-
     }//Fim da Classe Caracteristicas
 ?>

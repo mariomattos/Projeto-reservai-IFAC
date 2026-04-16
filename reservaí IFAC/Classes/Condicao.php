@@ -68,6 +68,5 @@
         public function getDataUltimaVistoria () {
             return $this->dataUltimaVistoria;
         }//Fim do método getDataUltimaVistoria ()
-
     }//Fim da Classe Condicao
 ?>

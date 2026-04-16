@@ -65,6 +65,5 @@
             //métodos de fabricante
             return $this->usuario;
         }//Fim do método getUsuario()
-
     }//Fim da classe Produto
 ?>
