@@ -2,7 +2,7 @@ Classes
 
 
 
-\- Condicao(idCondicao, estadoConservacao, observacaoGeral, dat777777aUltimaVistoria);
+\- Condicao(idCondicao, estadoConservacao, observacaoGeral, dataUltimaVistoria);
 
 \- Espaço(maxPessoas, nomeEspaco, descricaoEspaco, **inventario**, **condicao**);
 
