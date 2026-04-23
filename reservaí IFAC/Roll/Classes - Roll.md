@@ -2,7 +2,7 @@ Classes
 
 
 
-\- Condicao(idCondicao, estadoConservacao, observacaoGeral, dataUltimaVistoria);
+\- Condicao(idCondicao, estadoConservacao, observacaoGeral, dataUltimaVistoria); AVe MARIa DOIDo
 
 \- Espaço(maxPessoas, nomeEspaco, descricaoEspaco, **inventario**, **condicao**);
 
