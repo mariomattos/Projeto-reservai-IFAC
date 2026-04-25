@@ -1,5 +1,7 @@
 ----- Classes -----
 
+//A chave primária de cada classe está entre dois asteriscos.
+
 Características(*idCaracteristica*, nome, descricao, quantidade);
 
 Condicao(*idCondicao*, estadoConservacao, observacaoGeral, dataUltimaVistoria);
