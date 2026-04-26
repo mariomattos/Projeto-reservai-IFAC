@@ -1,92 +1,92 @@
 Requisitos Funcionais
 
-01 - Cadastrar Usuário (Cria uma conta nova para alguém no sistema). FEITO
+01 - Cadastrar Usuário (Cria uma conta nova para alguém no sistema).
 
-02 - Alterar Cadastro de Usuário (Muda os dados de quem já tem conta). FEITO
+02 - Alterar Cadastro de Usuário (Muda os dados de quem já tem conta).
 
-03 - Listar Cadastros de Usuários (Mostra a lista de todo mundo que está cadastrado). FEITO
+03 - Listar Cadastros de Usuários (Mostra a lista de todo mundo que está cadastrado).
 
-04 - Consultar Cadastro de Usuário (Vê tudo sobre um usuário específico). FEITO
+04 - Consultar Cadastro de Usuário (Vê tudo sobre um usuário específico).
 
-05 - Excluir Cadastro de Usuário (Apaga o registro de um usuário). FEITO
+05 - Excluir Cadastro de Usuário (Apaga o registro de um usuário).
 
-06 - Atribuir Perfil de Acesso ao Usuário (Define quem é admin e quem é usuário comum).FEITO
+06 - Atribuir Perfil de Acesso ao Usuário (Define quem é admin e quem é usuário comum).
 
-07 - Visualizar Histórico de Penalidades do Usuário (Permite que o Admin veja quantas vezes um usuário foi punido). FEITO
+07 - Visualizar Histórico de Penalidades do Usuário (Permite que o Admin veja quantas vezes um usuário foi punido).
 
-08 - Cadastrar Espaço (Adiciona uma sala, quadra ou auditório novo no sistema).FEITO
+08 - Cadastrar Espaço (Adiciona uma sala, quadra ou auditório novo no sistema).
 
-09 - Listar Cadastros de Espaços (Mostra todos os lugares que o usuário pode reservar).FEITO
+09 - Listar Cadastros de Espaços (Mostra todos os lugares que o usuário pode reservar).
      
-10 - Consultar Cadastro de Espaço (Vê tudo sobre um lugar específico).FEITO
+10 - Consultar Cadastro de Espaço (Vê tudo sobre um lugar específico).
 
-11 - Alterar Cadastro de Espaço (Edita as informações de um lugar que já existe).FEITO
+11 - Alterar Cadastro de Espaço (Edita as informações de um lugar que já existe).
      
-12 - Excluir Cadastro de Espaço (Tira um lugar da lista).FEITO
+12 - Excluir Cadastro de Espaço (Tira um lugar da lista).
 
-13 - Bloquear Reservas do Espaço por Período (Fecha o lugar para reforma ou evento interno).FEITO
+13 - Bloquear Reservas do Espaço por Período (Fecha o lugar para reforma ou evento interno).
 
-14 - Desbloquear Reservas do Espaço (Libera o lugar de novo depois que o bloqueio acabar).FEITO
+14 - Desbloquear Reservas do Espaço (Libera o lugar de novo depois que o bloqueio acabar).
 
-15 - Visualizar Fotos do Espaço (Mostra as fotos do ambiente).FEITO
+15 - Visualizar Fotos do Espaço (Mostra as fotos do ambiente).
 
-16 - Cadastrar Reserva de Espaço (Garante o lugar e o horário para o usuário).FEITO
+16 - Cadastrar Reserva de Espaço (Garante o lugar e o horário para o usuário).
 
-17 - Alterar Reserva de Espaço (Troca o dia ou a hora de uma reserva que já foi feita).FEITO
+17 - Alterar Reserva de Espaço (Troca o dia ou a hora de uma reserva que já foi feita).
 
-18 - Cancelar Reserva de Espaço (Desiste da reserva e libera o horário para outros).FEITO
+18 - Cancelar Reserva de Espaço (Desiste da reserva e libera o horário para outros).
 
-19 - Listar Reservas de Espaços (Mostra o "quem, onde e quando" de todos os agendamentos).FEITO
+19 - Listar Reservas de Espaços (Mostra o "quem, onde e quando" de todos os agendamentos).
 
-20 - Consultar Reserva de Espaço (Confere os detalhes de um agendamento específico).FEITO
+20 - Consultar Reserva de Espaço (Confere os detalhes de um agendamento específico).
 
-21 - Consultar Agenda de Reservas de um Espaço (Vê a ocupação de um lugar num visual de agenda/calendário).FEITO
+21 - Consultar Agenda de Reservas de um Espaço (Vê a ocupação de um lugar num visual de agenda/calendário).
 
-22 - Entrar na Lista de Espera pra Reserva (Coloca o nome na fila se o horário já estiver ocupado).FEITO
+22 - Entrar na Lista de Espera pra Reserva (Coloca o nome na fila se o horário já estiver ocupado).
 
-23 - Aprovar Reserva do Espaço (O admin dá o "ok" final para a reserva acontecer).FEITO
+23 - Aprovar Reserva do Espaço (O admin dá o "ok" final para a reserva acontecer).
 
-24 - Reprovar Reserva do Espaço (O admin diz "não" para um pedido de reserva).FEITO
+24 - Reprovar Reserva do Espaço (O admin diz "não" para um pedido de reserva).
 
-25 - Gerenciar Reservas Recorrentes (Gerencia reservas automáticas).NÃO FEITO
+25 - Gerenciar Reservas Recorrentes (Gerencia reservas automáticas).
 
-26 - Limitar Reservas Simultâneas por Usuário (Evita que uma pessoa só reserve tudo de uma vez).FEITO
+26 - Limitar Reservas Simultâneas por Usuário (Evita que uma pessoa só reserve tudo de uma vez).
 
-27 - Realizar Check-in/Checkout de Reserva (Marca a hora exata que você chegou e saiu do lugar).FEITO
+27 - Realizar Check-in/Checkout de Reserva (Marca a hora exata que você chegou e saiu do lugar).
 
-28 - Aplicar Penalidade por não Comparecimento (Penaliza usuário por não cumprir uma regra).FEITO
+28 - Aplicar Penalidade por não Comparecimento (Penaliza usuário por não cumprir uma regra).
 
-29 - Retirar Penalidade (Retira penalidade de um usuário).FEITO
+29 - Retirar Penalidade (Retira penalidade de um usuário).
 
-30 - Definir Regras de Reserva por Espaço (Define qual espaço pode reservar dependendo do perfil).FEITO
+30 - Definir Regras de Reserva por Perfil (Define qual espaço pode reservar dependendo do perfil).
 
-31 - Logar no Sistema (Logar no Sistema). FEITO
+31 - Logar no Sistema (Logar no Sistema).
 
-32 - Sair do Sistema (Sair do Sistema).FEITO
+32 - Sair do Sistema (Sair do Sistema).
 
-33 - Recuperar Senha (Recuperar Senha).FEITO
+33 - Recuperar Senha (Recuperar Senha).
 
-34 - Alterar Senha (Muda a senha atual do usuário logado).NÃO FEITO
+34 - Alterar Senha (Muda a senha atual do usuário logado).
 
-35 - Habilitar Agente Inteligente/Assistente Virtual (Liga o robozinho de ajuda).FEITO
+35 - Habilitar Agente Inteligente/Assistente Virtual (Liga o robozinho de ajuda).
 
-36 - Desabilitar Agente Inteligente/Assistente Virtual (Desliga o robozinho se ele estiver atrapalhando).FEITO
+36 - Desabilitar Agente Inteligente/Assistente Virtual (Desliga o robozinho se ele estiver atrapalhando).
 
-37 - Alterar Tema Visual (Troca entre o tema claro e o tema escuro).FEITO
+37 - Alterar Tema Visual (Troca entre o tema claro e o tema escuro).
 
-38 - Definir Escalonamento de Fonte (Aumenta ou diminui o tamanho da letra).FEITO
+38 - Definir Escalonamento de Fonte (Aumenta ou diminui o tamanho da letra).
 
-39 - Avaliar Espaço (Diz o que achou do lugar depois de usar).FEITO
+39 - Avaliar Espaço (Diz o que achou do lugar depois de usar).
 
-40 - Editar Avaliação do Espaço (Muda a nota ou o comentário que você já enviou).FEITO
+40 - Editar Avaliação do Espaço (Muda a nota ou o comentário que você já enviou).
 
-41 - Listar Avaliações de Espaços (Mostra a avaliação de todos os espaços).FEITO
+41 - Listar Avaliações de Espaços (Mostra a avaliação de todos os espaços).
 
-42 - Consultar Avaliação do Espaço (Mostra a avaliação de um espaço específico).FEITO
+42 - Consultar Avaliação do Espaço (Mostra a avaliação de um espaço específico).
 
-43 - Favoritar Espaço (Marca os lugares que você mais gosta para achar rápido).FEITO
+43 - Favoritar Espaço (Marca os lugares que você mais gosta para achar rápido).
 
-44 - Abrir Chat Interno Entre Usuário e Admin (Tirar dúvidas sobre espaço e etc.).FEITO
+44 - Abrir Chat Interno Entre Usuário e Admin (Tirar dúvidas sobre espaço e etc.).
 
-45 - Reportar Problema no Espaço (Avisa se a lâmpada queimou ou se o lugar está sujo).FEITO
+45 - Reportar Problema no Espaço (Avisa se a lâmpada queimou ou se o lugar está sujo).
      
