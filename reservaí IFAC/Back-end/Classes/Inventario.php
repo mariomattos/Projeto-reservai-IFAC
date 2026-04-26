@@ -1,17 +1,39 @@
 <?php
     //Classe Inventario
     class Inventario {
-        //Referência de Memória
-        private $espaco;
-        private $item;
+        //Atributos
+        private $idInventario;
+        private $item; //Agregação
 
         //Métodos
-        public function addItem ($idItem, $nomeItem, $quantidadeItem, $descricaoItem) {
-            $this->item[] = new Item ($idItem, $nomeItem, $quantidadeItem, $descricaoItem);
-        }//Fim do método addItem()
+
+         //Método Construtor
+        public function __construct ($idInventario) {
+            $this->setIdInventario ($idInventario);
+            $this->item = array();
+        }//Fim do Método Construtor
+
+        //Método __destruct ()
+        public function __destruct () {
+        }//Fim do método __destruct ()
+
+        //Método setIdInventario ()
+        public function setIdInventario ($idInventario) {
+            $this->idInventario = $idInventario;
+        }//Fim do método setIdInventario
+
+        //Método getIdInventario ()
+        public function getIdInventario () {
+            return $this->idInventario;
+        }//Fim do método getIdInventario ()
+
+        //Método addItem ()
+        public function addItem (Item $i) {
+            $this->item[] = $i;
+        }//Fim do método addItem ()
 
         public function getItem () {
             return $this->item;
-        }//Fim do método getItem ()1
+        }//Fim do método getItem ()
     }//Fim da Classe Inventario
 ?>

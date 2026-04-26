@@ -1,69 +1,64 @@
 <?php
-    //Classe Produto
+    //Classe Reserva
     class Reserva {
-        //atributos
-        private $ID;
-        private $horario;
-        private $espaco;
-        //Referência de memória
-        private $usuario;
+        //Atributos
+        private $idReserva;
+        private $horarioReserva;
+        private $espaco; //Associação
+        private $usuario; //Associação
 
         //Métodos
 
         //Método construtor
-        public function __construct ($ID, $horario, $espaco) {
-            $this->setID($ID);
-            $this->setHorario($horario);
-            $this->setEspaco($espaco);
+        public function __construct ($idReserva, $horarioReserva) {
+            $this->setIdReserva ($idReserva);
+            $this->setHorarioReserva ($horarioReserva);
         }//Fim do método construtor
 
-        //Método setID()
-        public function setID ($ID) {
-                $this->ID = $ID;    
-        }//Fim do método setID()
+        //Método __destruct ()
+        public function __destruct () {
+        }//Fim do método __destruct ()
 
-        //Método getID()
-        public function getID () {
-            return $this->ID;
-        }//Fim do método getID()
+        //Método setIdReserva ()
+        public function setIdReserva ($idReserva) {
+            $this->idReserva = $idReserva;    
+        }//Fim do método setIdReserva ()
 
-        //Método setHorario()
-        public function setHorario ($horario) {
-            if (is_string($horario) AND $horario >= 0) {
-                $this->horario = $horario;
-            }
-        }//Fim do método setHorario()
+        //Método getIdReserva ()
+        public function getIdReserva () {
+            return $this->idReserva;
+        }//Fim do método getIdReserva ()
 
-        //Método getHorario()
-        public function getHorario () {
-            return $this->horario;
-        }//Fim do método getHorario()
+        //Método setHorarioReserva ()
+        public function setHorarioReserva ($horarioReserva) {
+            $this->horarioReserva = $horarioReserva;
+        }//Fim do método setHorarioReserva ()
 
-        //Método setEspaco()
-        public function setEspaco($espaco) {
-            if (is_string($espaco) AND $espaco > 0) {
-                $this->espaco = $espaco;
-            }
-        }//Fim do método setEspaco()
+        //Método getHorarioReserva ()
+        public function getHorarioReserva () {
+            return $this->horarioReserva;
+        }//Fim do método getHorarioReserva ()
 
-        //Método getEspaco()
-        public function getEspaco() {
+        //Método setEspaco ()
+        public function setEspaco (Espaco $e) {
+        //Passando a referência do objeto e
+            $this->espaco = $e;
+        }//Fim do método setEspaco ()
+
+        //Método getEspaco ()
+        public function getEspaco () {
             return $this->espaco;
-        }//Fim do método getEspaco()
+        }//Fim do método getEspaco ()
 
-        //Método setUsuario()
+        //Método setUsuario ()
         public function setUsuario (Usuario $u) {
-            //Passando a referência do objeto uf que
-            //é do tipo Fabricante
+        //Passando a referência do objeto u
             $this->usuario = $u;
-        }//Fim do método setUsuario()
+        }//Fim do método setUsuario ()
 
-        //Método getUsuario()
+        //Método getUsuario ()
         public function getUsuario () {
-            //Retorna a referência inteira de fabricante
-            //É possível acessar os atributos e os 
-            //métodos de fabricante
             return $this->usuario;
-        }//Fim do método getUsuario()
-    }//Fim da classe Produto
+        }//Fim do método getUsuario ()
+    }//Fim da classe Reserva
 ?>

@@ -5,8 +5,7 @@
         private $matriculaUsuario;
         private $cpfUsuario;
         private $dataNascimentoUsuario;
-        //Referência de memória
-        private $caracteristicas;
+        private $caracteristicas; //Composição
 
         //Métodos
 
@@ -15,6 +14,7 @@
             $this->setMatriculaUsuario ($matriculaUsuario);
             $this->setCpfUsuario ($cpfUsuario);
             $this->setDataNascimentoUsuario ($dataNascimentoUsuario);
+            $this->caracteristicas = array();
         }//Fim do método Construtor
 
         //Método setMatriculaUsuario ()

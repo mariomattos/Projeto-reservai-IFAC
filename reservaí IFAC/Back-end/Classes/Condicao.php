@@ -23,9 +23,7 @@
 
         //Método setIdCondicao ()
         public function setIdCondicao ($idCondicao) {
-            if (is_string($idCondicao)) {
-                $this->idCondicao = $idCondicao;
-            }
+            $this->idCondicao = $idCondicao;
         }//Fim do método setIdCondicao ()
 
         //Método getIdCondicao ()
@@ -35,9 +33,7 @@
 
         //Método setEstadoConservacao ()
         public function setEstadoConservacao ($estadoConservacao) {
-            if (is_string($estadoConservacao)) {
-                $this->estadoConservacao = $estadoConservacao;
-            }
+            $this->estadoConservacao = $estadoConservacao;
         }//Fim do método setEstadoConservacao ()
 
         //Método getEstadoConservacao ()
@@ -47,9 +43,7 @@
 
         //Método setObservacaoGeral ()
         public function setObservacaoGeral ($observacaoGeral) {
-            if (is_string($observacaoGeral)) {
-                $this->observacaoGeral = $observacaoGeral;
-            }
+            $this->observacaoGeral = $observacaoGeral;
         }//Fim do método setObservacaoGeral ()
 
         //Método getObservacaoGeral ()
@@ -59,9 +53,7 @@
 
         //Método setDataUltimaVistoria ()
         public function setDataUltimaVistoria ($dataUltimaVistoria) {
-            if (is_string($dataUltimaVistoria)) {
-                $this->dataUltimaVistoria = $dataUltimaVistoria;
-            }
+            $this->dataUltimaVistoria = $dataUltimaVistoria;
         }//Fim do método setDataUltimaVistoria ()
 
         //Método getDataUltimaVistoria ()

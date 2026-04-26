@@ -6,10 +6,10 @@
     //Criaçao do Objeto
     $u1 = new Usuario ('20251CRB45810510052', '02065107219', '21/09/2009');
     //Composiçao
-    $u1->addCaracteristicas('1', 'Matheus', '1', '1');
+    $u1->addCaracteristicas('1', 'Matheus', '1', '1303');
 
     foreach ($u1->getCaracteristicas() as $c) {
-        print 'Caracteristicas do usuario: <br> Nome:' . $c->getNome() . '<br>';
+        print 'Caracteristicas do usuario: <br> Nome:' . $c->getNome() . '<br> Quantidade:' . $c->getQuantidade() . '<br>';
     }
 
     echo 'Matrícula: ' . $u1->getMatriculaUsuario() . '<br>';
