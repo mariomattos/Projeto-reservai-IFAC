@@ -36,7 +36,5 @@ Item - Condicao (Item->todo, Condicao->parte);
 Usuario - Caracteristica (Usuario->todo, Caracteristica->parte).
 
 
-Composição:
-Espaco - Inventario (Inventario não existe sem Espaco);
+Agregação:
 Item - Inventario (Inventario não existe sem Item);
-Espaco - Reserva (Reserva não existe sem espaco).
