@@ -5,8 +5,8 @@
         protected $nivelDeEnsino;
 
         //Método Construtor ()
-        public function __construct ($matricula,$cpfUsuario, $dataNascimentoUsuario, $nivelDeEnsino) {
-            parent::__construct ($matricula,$cpfUsuario, $dataNascimentoUsuario);
+        public function __construct ($matricula,$cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario, $nivelDeEnsino) {
+            parent::__construct ($matricula,$cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario);
             $this->setNivelDeEnsino($nivelDeEnsino);
         }//Fim do método Construtor ()
 

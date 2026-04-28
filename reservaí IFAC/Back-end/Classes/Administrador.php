@@ -5,9 +5,9 @@
         protected $numeroDeAcesso;
 
         //Método Construtor ()
-        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $numeroDeAcesso) {
-        parent::__construct ($matricula, $cpfUsuario, $dataNascimentoUsuario);
-        $this->setNumeroDeAcesso($numeroDeAcesso);
+        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario, $numeroDeAcesso) {
+            parent::__construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario);
+            $this->setNumeroDeAcesso($numeroDeAcesso);
         }//Fim do método Construtor ()
 
         //Método setNumeroDeAcesso ()

@@ -5,8 +5,8 @@
         protected $disciplina;
         
         //Método Construtor ()
-        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $disciplina) {
-            parent::__construct ($matricula, $cpfUsuario, $dataNascimentoUsuario);
+        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario, $disciplina) {
+            parent::__construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario);
             $this->setDisciplina ($disciplina);
         }//Fim do método Construtor ()
 

@@ -5,15 +5,19 @@
         private $matricula;
         private $cpfUsuario;
         private $dataNascimentoUsuario;
+        private $emailUsuario;
+        private $senhaUsuario;
         private $caracteristicas; //Composição
 
         //Métodos
 
         //Método Construtor
-        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario) {
+        public function __construct ($matricula, $cpfUsuario, $dataNascimentoUsuario, $emailUsuario, $senhaUsuario) {
             $this->setMatricula ($matricula);
             $this->setCpfUsuario ($cpfUsuario);
             $this->setDataNascimentoUsuario ($dataNascimentoUsuario);
+            $this->setEmailUsuario ($emailUsuario);
+            $this->setSenhaUsuario ($senhaUsuario);
             $this->caracteristicas = array();
         }//Fim do método Construtor
 
@@ -46,6 +50,26 @@
         public function getDataNascimentoUsuario () {
             return $this->dataNascimentoUsuario;
         }//Fim do Método getDataNascimentoUsuario ()
+
+        //Método setEmailUsuario ()
+        public function setEmailUsuario ($emailUsuario) {
+            $this->emailUsuario = $emailUsuario;
+        }//Fim do Método setEmailUsuario ()
+
+        //Método getEmailUsuario ()
+        public function getEmailUsuario () {
+            return $this->emailUsuario;
+        }//Fim do Método getEmailUsuario ()
+
+        //Método setSenhaUsuario ()
+        public function setSenhaUsuario ($senhaUsuario) {
+            $this->senhaUsuario = $senhaUsuario;
+        }//Fim do Método setSenhaUsuario ()
+
+        //Método getSenhaUsuario ()
+        public function getSenhaUsuario () {
+            return $this->senhaUsuario;
+        }//Fim do Método getSenhaUsuario ()
 
         //Método addCaracteristicas
         public function addCaracteristicas($nome, $descricao, $quantidade) {
