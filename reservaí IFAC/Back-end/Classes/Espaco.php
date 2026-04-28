@@ -3,16 +3,16 @@
     class Espaco {
         //Atributos
         private $idEspaco;
-        private $inventario; //Associação
-        private $condicao; //Composição
+        private $condicao;
+        private $inventario; //Composição
         private $caracteristicas; //Composição
 
         //Métodos
 
         //Método construtor
-        public function __construct ($idEspaco) {
+        public function __construct ($idEspaco, $condicao) {
             $this->setIdEspaco($idEspaco);
-            $this->condicao = array();
+            $this->setCondicao($condicao);
             $this->caracteristicas = array();
         }//Fim do método construtor
 
@@ -30,6 +30,16 @@
             return $this->idEspaco;
         }//Fim do método getIdEspaco ()
 
+        //Método setCondicao ()
+        public function setCondicao ($condicao) {
+            $this->condicao = $condicao;
+        }//Fim do método setCondicao ()
+
+        //Método getCondicao ()
+        public function getCondicao () {
+            return $this->condicao;
+        }//Fim do método getCondicao ()
+
         //Método setInventario ()
         public function setInventario (Inventario $i) {
             //Passando a referência do objeto i
@@ -41,19 +51,9 @@
             return $this->inventario;
         }//Fim do método getInventario ()
 
-        //Método addCondicao ()
-        public function addCondicao($idCondicao, $estadoConservacao, $observacaoGeral, $dataUltimaVistoria) {
-            $this->condicao[] = new Condicao ($idCondicao, $estadoConservacao, $observacaoGeral, $dataUltimaVistoria);
-        }//Fim do método addCondicao ()
-
-        //Método getCondicao ()
-        public function getCondicao () {
-            return $this->condicao;
-        }//Fim do método getCondicao ()
-
         //Método addCaracteristicas ()
-        public function addCaracteristicas($id, $nome, $descricao, $quantidade) {
-            $this->caracteristicas[] = new Caracteristicas ($id, $nome, $descricao, $quantidade);
+        public function addCaracteristicas($nome, $descricao, $quantidade) {
+            $this->caracteristicas[] = new Caracteristicas ($nome, $descricao, $quantidade);
         }//Fim do método addCaracteristicas()
 
         //Método getCaracteristicas ()

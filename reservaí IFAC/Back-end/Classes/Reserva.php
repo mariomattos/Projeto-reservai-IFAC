@@ -4,8 +4,8 @@
         //Atributos
         private $idReserva;
         private $horarioReserva;
-        private $espaco; //Associação
-        private $usuario; //Associação
+        private $espaco; //Agregação
+        private $usuario; //Agregação
 
         //Métodos
 
