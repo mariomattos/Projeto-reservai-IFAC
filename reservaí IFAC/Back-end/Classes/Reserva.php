@@ -37,6 +37,16 @@
             return $this->horarioReserva;
         }//Fim do método getHorarioReserva ()
 
+        //Método setDataReserva ()
+        public function setDataReserva ($dataReserva) {
+            $this->dataReserva = $dataReserva;
+        }//Fim do método setDataReserva ()
+
+        //Método getDataReserva ()
+        public function getDataReserva () {
+            return $this->dataReserva;
+        }//Fim do método getDataReserva ()
+
         //Método setUsuario ()
         public function setUsuario (Usuario $u) {
         //Passando a referência do objeto u
@@ -47,15 +57,5 @@
         public function getUsuario () {
             return $this->usuario;
         }//Fim do método getUsuario ()
-
-        //Método setDataReserva ()
-        public function setDataReserva ($dataReserva) {
-            $this->dataReserva = $dataReserva;
-        }//Fim do método setDataReserva ()
-
-        //Método getDataReserva ()
-        public function getDataReserva () {
-            return $this->dataReserva;
-        }//Fim do método getDataReserva ()
     }//Fim da classe Reserva
 ?>

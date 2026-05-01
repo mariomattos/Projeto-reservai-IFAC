@@ -5,7 +5,7 @@
 
 Caracteristicas {($nome, $descricao, $quantidade)}
 
-Espaco {(*$idEspaco*, $condicao, $caracteristicas)}
+Espaco {(*$idEspaco*, $condicao, ,$reservas, $itens, $caracteristicas)}
 
 Inventario {($item)}
 
@@ -34,7 +34,7 @@ Inventario - Item (Inventario não existe sem item, e Item é criado dentro do I
 
 --- Agregação ---
 Espaco - Reserva (Espaço existe sem reservas, e várias reservas agregam espaço);
-Espaco - Item (Espaco existe sem item, e varios iten agregam o espaço);
+Espaco - Item (Espaco existe sem itens, e varios itens agregam o espaço);
 
 
 ========== Exemplos ===========
