@@ -10,8 +10,8 @@
         }
 
         //Método addItem ()
-        public function addItem ($idItem) {
-            $this->item[] = new Item($idItem);
+        public function addItem (Item $item) {
+            $this->item[] = $item;
         }//Fim do método addItem ()
 
         public function getItem () {
