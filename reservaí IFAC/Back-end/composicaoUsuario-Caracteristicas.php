@@ -5,7 +5,7 @@
     require_once 'Classes/Professor.php';
 
     //Criaçao do Objeto
-    $p1 = new Professor ('20251CRB45810510000', '123.456.789-00', '12/07/1981', 'breno.silveira@ifac.edu.br', '****', 'Programação para Web');
+    $p1 = new Professor ('1317949', '123.456.789-00', '12/07/1981', 'breno.silveira@ifac.edu.br', '****', 'Programação para Web');
     $p1->addCaracteristicas('Breno Carrillo Silveira', '', '');
 
     foreach ($p1->getCaracteristicas() as $c) {
