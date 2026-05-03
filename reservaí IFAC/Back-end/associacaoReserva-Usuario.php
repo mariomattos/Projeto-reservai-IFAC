@@ -7,7 +7,7 @@
 
     //Criação dos Objetos
     $r1 = new Reserva ('1', '13:30', '04/05/2026');
-    $p1 = new Professor ('20251CRB45810510000', '', '', 'breno.silveira@ifac.edu.br', '', 'Programação para Web');
+    $p1 = new Professor ('1317949', '', '', 'breno.silveira@ifac.edu.br', '', 'Programação para Web');
     $p1->addCaracteristicas('Breno Carrilo Silveira', '', '');
 
     //Associação
