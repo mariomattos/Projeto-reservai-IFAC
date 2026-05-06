@@ -1,0 +1,46 @@
+========== Classes ========== 
+
+//A chave primária de cada classe está entre dois asteriscos.
+
+
+Characteristics {($name, $description, $quantity)}
+
+Space {($spaceId, $condition, $bookings, $items, $characteristics)}
+
+Inventory {($item)}
+
+Item {($itemId, $characteristics)}
+
+Booking {($bookingId, $bookingTime, $bookingDate, $user)}
+
+super User {($registrationId, $userCpf, $userBirthDate, $userPassword, $userEmail, $characteristics)
+    sub Administrator ($accessNumber);
+    sub Student ($educationLevel);
+    sub Teacher ($subject);
+}
+
+========== Relacionamentos ===========
+
+--- Associação ---
+User - Booking (Usuário e reserva existem independentemente um do outro);
+
+
+--- Composição ---
+Space - Characteristics (Espaço não existe sem características, e características não existe sem espaco);
+Item - Characteristics (Item não existe sem características, e característica não existe sem usuário);
+User - Characteristics (Usuário não existe sem características, e características não existe sem usuário);
+Inventory - Item (Inventario não existe sem item, e Item é criado dentro do Inventario)
+
+
+--- Agregação ---
+Space - Booking (Espaço existe sem reservas, e várias reservas agregam espaço);
+Space - Item (Espaco existe sem itens, e varios itens agregam o espaço);
+
+
+========== Exemplos ===========
+
+Associação - Fabricante existe sem celular existir, celular existe sem fabricante existir.
+
+Composição - Características não existe sem usuário.
+
+Agregação - Um local armazena vários objetos da mesma classe, porém não depende desses objetos pra existir.
