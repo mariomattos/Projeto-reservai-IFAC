@@ -4,11 +4,11 @@
         //Atributos
         protected $acessNumber;
 
-        //Método Construct ()
+        //Método __construct ()
         public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $acessNumber) {
             parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword);
             $this->setAcessNumber($acessNumber);
-        }//Fim do método Construct ()
+        }//Fim do método __construct ()
 
         //Método setAcessNumber ()
         public function setAcessNumber ($acessNumber) {
@@ -19,5 +19,5 @@
         public function getAcessNumber () {
             return $this->acessNumber;
         }//Fim do método getAcessNumber ()
-    }//Fim da classe Administrator () 
+    }//Fim da Classe Administrator () 
 ?>

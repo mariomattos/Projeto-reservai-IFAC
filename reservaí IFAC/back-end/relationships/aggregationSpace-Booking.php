@@ -3,7 +3,7 @@
     require_once '../models/Booking.php';
     require_once '../models/Space.php';
     require_once '../models/User.php';
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
     
     //Criação do espaço
     $s1 = new Space ('1', 'Disponível');

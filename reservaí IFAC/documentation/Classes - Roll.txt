@@ -1,23 +1,21 @@
 ========== Classes ========== 
 
-//A chave primária de cada classe está entre dois asteriscos.
+Booking(bookingId, bookingTime, bookingDate, user)
 
+Characteristic(name, description, quantity)
 
-Characteristics {($name, $description, $quantity)}
+Inventory(item)
 
-Space {($spaceId, $condition, $bookings, $items, $characteristics)}
+Item(itemId, characteristics)
 
-Inventory {($item)}
+Space(spaceId, condition, bookings, $items, characteristics)
 
-Item {($itemId, $characteristics)}
-
-Booking {($bookingId, $bookingTime, $bookingDate, $user)}
-
-super User {($registrationId, $userCpf, $userBirthDate, $userPassword, $userEmail, $characteristics)
-    sub Administrator ($accessNumber);
-    sub Student ($educationLevel);
-    sub Teacher ($subject);
+super User(registrationId, userCpf, userBirthDate, userPassword, userEmail, characteristics) {
+    sub Administrator(acessNumber);
+    sub Student(educationLevel);
+    sub Teacher(subject);
 }
+
 
 ========== Relacionamentos ===========
 

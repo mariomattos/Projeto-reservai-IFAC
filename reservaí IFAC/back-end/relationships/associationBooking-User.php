@@ -2,7 +2,7 @@
     //Requisição de Acesso
     require_once '../models/Booking.php';
     require_once '../models/User.php';
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
     require_once '../models/Teacher.php';
 
     //Criação dos Objetos

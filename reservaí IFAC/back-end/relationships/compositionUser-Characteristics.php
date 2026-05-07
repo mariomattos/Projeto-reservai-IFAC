@@ -1,6 +1,6 @@
 <?php
     //Requisiçao de Acesso
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
     require_once '../models/User.php';
     require_once '../models/Teacher.php';
 

@@ -11,14 +11,14 @@
 
         //Métodos
 
-        //Método Construct
+        //Método __construct ()
         public function __construct ($spaceId, $condition) {
             $this->setSpaceId($spaceId);
             $this->setCondition($condition);
             $this->bookings = array();
             $this->characteristics = array();
             $this->item = array();
-        }//Fim do método Construct
+        }//Fim do método __construct ()
 
         //Método setSpaceId ()
         public function setSpaceId ($spaceId) {
@@ -42,7 +42,6 @@
 
         //Método addBookings ()
         public function addBookings (Booking $b) {
-            //Passando a referência do objeto b
             $this->bookings[] = $b;
         }//Fim do método addBookings ()
 
@@ -53,7 +52,6 @@
 
         //Método addItems ()
         public function addItems (Item $i) {
-            //Passando a referência do objeto i
             $this->items[] = $i;
         }//Fim do método addItems ()
 
@@ -64,12 +62,12 @@
 
         //Método addCharacteristics ()
         public function addCharacteristics($name, $description, $quantity) {
-            $this->characteristics[] = new Characteristics ($name, $description, $quantity);
+            $this->characteristics[] = new Characteristic ($name, $description, $quantity);
         }//Fim do método addCharacteristics()
 
         //Método getCharacteristics ()
         public function getCharacteristics () {
             return $this->characteristics;
         }//Fim do método getCharacteristics ()
-    }//Fim da classe Space
+    }//Fim da Classe Space
 ?>

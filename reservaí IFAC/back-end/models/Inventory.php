@@ -2,13 +2,14 @@
     //Classe Inventory
     class Inventory {
         //Atributos
+        //Referência de memória
         private $items; //Composição
 
-        //Método construct
+        //Método __construct ()
         public function __construct() {
             $this->item = array();
         }
-        //Fim do método construct
+        //Fim do método __construct ()
 
         //Método addItems ()
         public function addItems (Item $item) {
@@ -18,6 +19,6 @@
         //Método getItems
         public function getItems () {
             return $this->items;
-        }//Método getItems
+        }//Fim do método getItems
     }//Fim da Classe Inventory
 ?>

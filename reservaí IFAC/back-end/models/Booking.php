@@ -10,12 +10,12 @@
 
         //Métodos
 
-        //Método construct
+        //Método __construct ()
         public function __construct ($bookingId, $bookingTime, $bookingDate) {
             $this->setBookingId ($bookingId);
             $this->setBookingTime ($bookingTime);
             $this->setBookingDate ($bookingDate);
-        }//Fim do método construct
+        }//Fim do método __construct ()
 
         //Método setBookingId ()
         public function setBookingId ($bookingId) {
@@ -49,7 +49,6 @@
 
         //Método setUser ()
         public function setUser (User $u) {
-        //Passando a referência do objeto u
             $this->user = $u;
         }//Fim do método setUser ()
 
@@ -57,5 +56,5 @@
         public function getUser () {
             return $this->user;
         }//Fim do método getUser ()
-    }//Fim da classe Booking
+    }//Fim da Classe Booking
 ?>

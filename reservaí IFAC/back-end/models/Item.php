@@ -3,14 +3,15 @@
     class Item {
         //Atributos
         private $itemId;
+        //Referência de memória
         private $characteristics; //Composição
         //Métodos
 
-        //Método construct
+        //Método __construct ()
         public function __construct ($itemId) {
             $this->setItemId($itemId);
             $this->characteristics = array();
-        }//Fim do método construct
+        }//Fim do método __construct ()
 
         //Método setItemId ()
         public function setItemId ($itemId) {
@@ -24,7 +25,7 @@
 
         //Método addCharacteristics ()
         public function addCharacteristics($name, $description, $quantity) {
-            $this->characteristics[] = new Characteristics ($name, $description, $quantity);
+            $this->characteristics[] = new Characteristic ($name, $description, $quantity);
         }//Fim do método addCharacteristics()
 
         //Método getCharacteristics ()

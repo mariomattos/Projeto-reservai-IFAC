@@ -2,7 +2,7 @@
     //Requisição de acesso
     require_once '../models/Inventory.php';
     require_once '../models/Item.php';
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
 
     //Criaçao do inventário
     $Inv = new Inventory ();

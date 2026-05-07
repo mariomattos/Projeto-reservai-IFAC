@@ -4,11 +4,11 @@
         //Atributos
         protected $educationLevel;
 
-        //Método Construct ()
+        //Método __construct ()
         public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $educationLevel) {
             parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword);
             $this->setEducationLevel($educationLevel);
-        }//Fim do método Construct ()
+        }//Fim do método __construct ()
 
         //Método setEducationLevel ()
         public function setEducationLevel ($educationLevel) {

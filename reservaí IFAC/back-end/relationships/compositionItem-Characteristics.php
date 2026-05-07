@@ -1,6 +1,6 @@
 <?php
     //Requisiçao de Acesso
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
     require_once '../models/Item.php';
     //Criação do Objeto
     $i1 = new Item('1');

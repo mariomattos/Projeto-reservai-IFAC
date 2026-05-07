@@ -2,7 +2,7 @@
     //Requisição de acesso
     require_once '../models/Item.php';
     require_once '../models/Space.php';
-    require_once '../models/Characteristics.php';
+    require_once '../models/Characteristic.php';
     
     //Criação do objeto
     $s1 = new Space (1, "Disponível");
