@@ -2,15 +2,13 @@
 
 Booking(bookingId, bookingTime, bookingDate, user)
 
-Characteristic(name, description, quantity)
+Inventory(items)
 
-Inventory(item)
+Item(itemId, itemName, itemDescription, itemQuantity)
 
-Item(itemId, characteristics)
+Space(spaceId, spaceCondition, spaceName, spaceDescription, bookings, items)
 
-Space(spaceId, condition, bookings, $items, characteristics)
-
-super User(registrationId, userCpf, userBirthDate, userPassword, userEmail, characteristics) {
+super User(registrationId, userCpf, userBirthDate, userPassword, userEmail, userName) {
     sub Administrator(acessNumber);
     sub Student(educationLevel);
     sub Teacher(subject);
@@ -24,9 +22,6 @@ User - Booking (Usuário e reserva existem independentemente um do outro);
 
 
 --- Composição ---
-Space - Characteristics (Espaço não existe sem características, e características não existe sem espaco);
-Item - Characteristics (Item não existe sem características, e característica não existe sem usuário);
-User - Characteristics (Usuário não existe sem características, e características não existe sem usuário);
 Inventory - Item (Inventario não existe sem item, e Item é criado dentro do Inventario)
 
 

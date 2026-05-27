@@ -3,14 +3,17 @@
     class Item {
         //Atributos
         private $itemId;
-        //Referência de memória
-        private $characteristics; //Composição
+        private $itemName;
+        private $itemDescription;
+        private $itemQuantity;
         //Métodos
 
         //Método __construct ()
-        public function __construct ($itemId) {
+        public function __construct ($itemId, $itemName, $itemDescription, $itemQuantity) {
             $this->setItemId($itemId);
-            $this->characteristics = array();
+            $this->setItemName($itemName);
+            $this->setItemDescription($itemDescription);
+            $this->setItemQuantity($itemQuantity);
         }//Fim do método __construct ()
 
         //Método setItemId ()
@@ -23,14 +26,34 @@
             return $this->itemId;
         }//Fim do método ItemId ()
 
-        //Método addCharacteristics ()
-        public function addCharacteristics($name, $description, $quantity) {
-            $this->characteristics[] = new Characteristic ($name, $description, $quantity);
-        }//Fim do método addCharacteristics()
+        //Método setItemName ()
+        public function setItemName ($itemName) {
+            $this->itemName = $itemName;
+        }//Fim do método setItemName ()
 
-        //Método getCharacteristics ()
-        public function getCharacteristics () {
-            return $this->characteristics;
-        }//Fim do método getCharacteristics ()
+        //Método getItemName ()
+        public function getItemName () {
+            return $this->itemName;
+        }//Fim do método getItemName ()
+
+        //Método setItemDescription ()
+        public function setItemDescription ($itemDescription) {
+            $this->itemDescription = $itemDescription;
+        }//Fim do método setItemDescription ()
+
+        //Método getItemDescription ()
+        public function getItemDescription () {
+            return $this->itemDescription;
+        }//Fim do método getItemDescription ()
+
+        //Método setItemQuantity ()
+        public function setItemQuantity ($itemQuantity) {
+            $this->itemQuantity = $itemQuantity;
+        }//Fim do método setItemQuantity ()
+
+        //Método getItemQuantity ()
+        public function getItemQuantity () {
+            return $this->itemQuantity;
+        }//Fim do método getItemQuantity ()
     }//Fim da Classe Item
 ?>

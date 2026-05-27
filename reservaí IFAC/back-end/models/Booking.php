@@ -3,18 +3,20 @@
     class Booking {
         //Atributos
         private $bookingId;
-        private $bookingTime;
         private $bookingDate;
+        private $bookingStart;
+        private $bookingEnd;
         //Referência de memória
         private $user; //Associação
 
         //Métodos
 
         //Método __construct ()
-        public function __construct ($bookingId, $bookingTime, $bookingDate) {
+        public function __construct ($bookingId, $bookingDate, $bookingStart, $bookingEnd) {
             $this->setBookingId ($bookingId);
-            $this->setBookingTime ($bookingTime);
             $this->setBookingDate ($bookingDate);
+            $this->setBookingStart ($bookingStart);
+            $this->setBookingEnd ($bookingEnd);
         }//Fim do método __construct ()
 
         //Método setBookingId ()
@@ -27,15 +29,25 @@
             return $this->bookingId;
         }//Fim do método getBookingId ()
 
-        //Método setBookingTime ()
-        public function setBookingTime ($bookingTime) {
-            $this->bookingTime = $bookingTime;
-        }//Fim do método setBookingTime ()
+        //Método setBookingStart ()
+        public function setBookingStart ($bookingStart) {
+            $this->bookingStart = $bookingStart;
+        }//Fim do método setBookingStart ()
 
-        //Método getBookingTime ()
-        public function getBookingTime () {
-            return $this->bookingTime;
-        }//Fim do método getBookingTime ()
+        //Método getBookingStart ()
+        public function getBookingStart () {
+            return $this->bookingStart;
+        }//Fim do método getBookingStart ()
+
+        //Método setBookingEnd ()
+        public function setBookingEnd ($bookingEnd) {
+            $this->bookingEnd = $bookingEnd;
+        }//Fim do método setBookingEnd ()
+
+        //Método getBookingEnd ()
+        public function getBookingEnd () {
+            return $this->bookingEnd;
+        }//Fim do método getBookingEnd ()
 
         //Método setBookingDate ()
         public function setBookingDate ($bookingDate) {
