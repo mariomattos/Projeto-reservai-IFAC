@@ -1,12 +1,13 @@
 <?php
+    require_once 'User.php';
     //Classe Student ()
     class Student extends User {
         //Atributos
         protected $educationLevel;
 
         //Método __construct ()
-        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $educationLevel) {
-            parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword);
+        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName, $educationLevel) {
+            parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName);
             $this->setEducationLevel($educationLevel);
         }//Fim do método __construct ()
 

@@ -1,12 +1,13 @@
 <?php
+    require_once 'User.php';
     //Classe Student ()
     class Teacher extends User {
         //Atributos
         protected $subject;
         
         //Método __construct ()
-        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $subject) {
-            parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword);
+        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName, $subject) {
+            parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName);
             $this->setSubject ($subject);
         }//Fim do método __construct ()
 

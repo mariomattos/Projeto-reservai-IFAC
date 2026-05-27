@@ -7,19 +7,19 @@
         private $userBirthDate;
         private $userEmail;
         private $userPassword;
+        private $userName;
         //Referência de memória
-        private $characteristics; //Composição
 
         //Métodos
 
         //Método __construct ()
-        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword) {
+        public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName) {
             $this->setRegistrationId ($registrationId);
             $this->setUserCpf ($userCpf);
             $this->setUserBirthDate ($userBirthDate);
             $this->setUserEmail ($userEmail);
             $this->setUserPassword ($userPassword);
-            $this->characteristics = array();
+            $this->setUserName ($userName);
         }//Fim do método __construct ()
 
         //Método setRegistrationId ()
@@ -72,14 +72,14 @@
             return $this->userPassword;
         }//Fim do método getUserPassword ()
 
-        //Método addCharacteristics
-        public function addCharacteristics($name, $description, $quantity) {
-            $this->characteristics[] = new Characteristic ($name, $description, $quantity);
-        }//Fim do método addCharacteristics()
+        //Método setUserName ()
+        public function setUserName ($userName) {
+            $this->userName = $userName;
+        }//Fim do método setUserName ()
 
-        //Método addCharacteristics
-        public function getCharacteristics () {
-            return $this->characteristics;
-        }//Fim do método addCharacteristics
+        //Método getUserName ()
+        public function getUserName () {
+            return $this->userName;
+        }//Fim do método getUserName ()
     }//Fim da Classe User
 ?>
