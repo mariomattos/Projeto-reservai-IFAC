@@ -35,7 +35,6 @@
     echo "Reservas do espaço: <br><br>";
 
     foreach ($s1->getBookings() as $b) {
-        //Acessando o usuário e suas características a partir da reserva
         echo "ID da reserva: " . $b->getBookingId() . "<br>";
         echo "Horário de início da reserva: " . $b->getBookingStart() . "<br>";
         echo "Horário de conclusão da reserva: " . $b->getBookingEnd() . "<br>";

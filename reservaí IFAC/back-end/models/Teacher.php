@@ -1,6 +1,5 @@
 <?php
-    require_once 'User.php';
-    //Classe Student ()
+    //Classe Teacher
     class Teacher extends User {
         //Atributos
         protected $subject;
@@ -20,5 +19,5 @@
         public function getSubject () {
             return $this->subject;
         }//Fim do método getSubject ()
-    }//Fim da Classe Student ()
+    }//Fim da Classe Teacher
 ?>

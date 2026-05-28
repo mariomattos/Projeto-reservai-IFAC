@@ -1,6 +1,5 @@
 <?php
-    require_once 'User.php';
-    //Classe Administrator ()
+    //Classe Administrator
     class Administrator extends User {
         //Atributos
         protected $acessNumber;
@@ -20,5 +19,5 @@
         public function getAcessNumber () {
             return $this->acessNumber;
         }//Fim do método getAcessNumber ()
-    }//Fim da Classe Administrator () 
+    }//Fim da Classe Administrator
 ?>

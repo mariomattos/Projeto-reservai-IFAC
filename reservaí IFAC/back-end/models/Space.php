@@ -38,7 +38,7 @@
         }//Fim do método setSpaceCondition ()
 
         //Método getSpaceCondition ()
-        public function getspaceCondition () {
+        public function getSpaceCondition () {
             return $this->spaceCondition;
         }//Fim do método getSpaceCondition ()
 
@@ -77,9 +77,9 @@
             $this->items[] = $i;
         }//Fim do método addItems ()
 
-        //Método getItem ()
+        //Método getItems ()
         public function getItems () {
             return $this->items;
-        }//Fim do método getItem ()
+        }//Fim do método getItems ()
     }//Fim da Classe Space
 ?>

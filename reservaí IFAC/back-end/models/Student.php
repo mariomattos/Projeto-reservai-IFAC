@@ -1,6 +1,5 @@
 <?php
-    require_once 'User.php';
-    //Classe Student ()
+    //Classe Student
     class Student extends User {
         //Atributos
         protected $educationLevel;
