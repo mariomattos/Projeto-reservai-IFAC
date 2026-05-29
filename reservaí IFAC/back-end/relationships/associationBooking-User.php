@@ -17,7 +17,4 @@
     echo 'Disciplina(s): ' . $t1->getSubject() . '<br>';
     echo 'Matricula do usuario: ' . $t1->getRegistrationId() . '<br>';
     echo 'E-mail do usuário: ' . $t1->getUserEmail() . '<br>';
-    echo 'Horário de início da reserva: ' . $b1->getBookingStart() . '<br>';
-    echo 'Horário de conclusão da reserva: ' . $b1->getBookingEnd() . '<br>';
-    echo 'Data da reserva: ' . $b1->getBookingDate() . '<br>';
 ?>
