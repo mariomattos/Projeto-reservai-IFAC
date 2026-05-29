@@ -8,7 +8,7 @@
         private $spaceDescription;
         //Referência de memória
         private $bookings; //Agregação
-        private $items; //Agregação
+        private $spaceInventory; // Composição
 
         //Métodos
 
@@ -19,7 +19,6 @@
             $this->setSpaceName($spaceName);
             $this->setSpaceDescription($spaceDescription);
             $this->bookings = array();
-            $this->item = array();
         }//Fim do método __construct ()
 
         //Método setSpaceId ()
@@ -72,14 +71,14 @@
             return $this->bookings;
         }//Fim do método getBookings ()
 
-        //Método addItems ()
-        public function addItems (Item $i) {
-            $this->items[] = $i;
-        }//Fim do método addItems ()
+        //Método addSpaceInventory ()
+        public function addSpaceInventory (Inventory $inv) {
+            $this->SpaceInventory = $inv;
+        }//Fim do método addSpaceInventory ()
 
-        //Método getItems ()
-        public function getItems () {
-            return $this->items;
-        }//Fim do método getItems ()
+        //Método getSpaceInventory ()
+        public function getSpaceInventory () {
+            return $this->SpaceInventory;
+        }//Fim do método getSpaceInventory ()
     }//Fim da Classe Space
 ?>
