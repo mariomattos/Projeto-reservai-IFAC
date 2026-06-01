@@ -4,6 +4,8 @@
         //Atributos
         protected $acessNumber;
 
+        //Métodos
+
         //Método __construct ()
         public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName, $acessNumber) {
             parent::__construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName);

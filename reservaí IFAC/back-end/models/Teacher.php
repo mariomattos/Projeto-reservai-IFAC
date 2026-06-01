@@ -3,6 +3,8 @@
     class Teacher extends User {
         //Atributos
         protected $subject;
+
+        //Métodos
         
         //Método __construct ()
         public function __construct ($registrationId, $userCpf, $userBirthDate, $userEmail, $userPassword, $userName, $subject) {

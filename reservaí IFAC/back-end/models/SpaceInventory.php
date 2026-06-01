@@ -6,6 +6,8 @@
         //Referência de memória
         private $items; //Composição
 
+        //Métodos   
+
         //Método __construct ()
         public function __construct($idSpaceInventory) {
             $this->setIdSpaceInventory ($idSpaceInventory);

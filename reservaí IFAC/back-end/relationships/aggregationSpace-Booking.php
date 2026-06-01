@@ -5,14 +5,14 @@
     require_once '../models/User.php';
     
     //Criação do espaço
-    $s1 = new Space ('1', 'Disponível', 'Sala B-111', '');
+    $s1 = new Space ('1', 'Disponível', 'Sala B-111', 'Normalmente usada para fins pedagógicos');
 
     //Criação das reservas e associação aos usuários
-    $b1 = new Booking('1', '04/05/2026', '13:30', '15:30');
+    $b1 = new Booking('1', '04/05/2026', '13h30', '15h30');
 
-    $b2 = new Booking('2', '04/05/2026', '15:50', '16:20');
+    $b2 = new Booking('2', '04/05/2026', '15h50', '16h20');
 
-    $b3 = new Booking('3', '04/05/2026', '16:20', '17:10'); 
+    $b3 = new Booking('3', '04/05/2026', '16h20', '17h10'); 
 
     //Agregação das reservas no espaço
     $s1->addBookings($b1);
@@ -23,6 +23,8 @@
     echo "Nome do espaço: " . $s1->getSpaceName() . "<br>";
     echo "ID do espaço: " . $s1->getSpaceId() . "<br>";
     echo "Condição do espaço: " . $s1->getSpaceCondition() .
+    '<br>';
+    echo "Descrição do espaço: " . $s1->getSpaceDescription() .
     '<br><br>';
     echo "Reservas do espaço: <br><br>";
 

@@ -17,11 +17,13 @@
 
     $i4 = new Item('4', 'Mesa', 'Mesa de escritório simples para uso do docente.', '1');
 
+    //Adicionando itens ao inventário
     $inv->addItems($i1);
     $inv->addItems($i2);
     $inv->addItems($i3);
     $inv->addItems($i4);
 
+    //Exibição dos dados
     print 'Inventário do espaço: ' . $s1->getSpaceName() . '<br>';
     print 'Id do Inventário: ' . $s1->getSpaceId() . '<br><br>';
     foreach ($inv->getItems() as $i) {
