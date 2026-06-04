@@ -1,4 +1,4 @@
-Models {
+Classes {
     Booking (bookingId, bookingDate, bookingStart, bookingEnd, user);
 
     Item (itemId, itemName, itemDescription, itemQuantity);
@@ -10,10 +10,10 @@ Models {
         sub Student (educationLevel);
         sub Teacher (subject);
     }
-} //Fim das Models
+} //Fim das Classes
 
 
-Relationships {
+Relacionamentos {
     Aggregation {
         Space - Booking (Espaço existe sem reservas, e várias reservas agregam espaço);
     }
@@ -25,14 +25,14 @@ Relationships {
     Composition {
         SpaceInventory - Item (Inventario não existe sem item, e Item é criado dentro do Inventario)
     }
-} //Fim dos Relationships
+} //Fim dos Relacionamentos
 
 
-Examples {
+Exemplos {
 
     Association - Fabricante existe sem celular existir, celular existe sem fabricante existir;
 
     Composition - Características não existe sem usuário;
 
     Aggregation - Um local armazena vários objetos da mesma classe, porém não depende desses objetos pra existir;
-} //Fim dos Examples
+} //Fim dos Exemplos
