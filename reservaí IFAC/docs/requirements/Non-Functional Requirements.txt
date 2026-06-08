@@ -1,0 +1,63 @@
+Requisitos Não Funcionais {
+
+    ID RNF01 USABILIDADE {
+        Descrição {
+            O sistema é totalmente intuitivo e de fácil compreensão, portanto o usuário não precisa ter muito conhecimento à respeito de tecnologias para usufruir das funcionalidades que o aplicativo oferece.
+        }
+    } //Fim RNF01 USABILIDADE
+
+    ID RNF02 TECNOLOGIA PARA DISPOSITIVOS MÓVEIS {
+        Descrição {
+            A aplicação foi desenvolvida em React Native. A pertinência dos dados foi realizada no sistema de gerenciamento de banco de dados não relacional Firebase, sem a necessidade de compra de licenças com alguns desses serviços.
+        }
+    } //Fim RNF02 TECNOLOGIA PARA DISPOSITIVOS MÓVEIS
+
+    ID RNF03 ARMAZENAMENTO {
+        Descrição {
+            O banco de dados, implementado em Firebase, armazenará toda as informações necessárias que forem inseridas na aplicação.
+        }
+    } //Fim RNF03 ARMAZENAMENTO
+
+    ID RNF04 DISPONIBILIDADE {
+        Descrição {
+            O sistema estará disponível 24 {vinte e quatro} horas por dia para download no Google Play Store.
+        }
+    } //Fim RNF04 DISPONIBILIDADE
+
+    ID RNF05 PORTABILIDADE {
+        Descrição {
+            A aplicação é suportada em dispositivos móveis com sistema operacional Android 4.2. A portabilidade pode ser expandida.
+        }
+    } //Fim RNF05 PORTABILIDADE
+
+    ID RNF06 SEGURANÇA {
+        Descrição {
+            Os dados gerados pela aplicação, a base de dados e o servidor são seguros, via autenticação no sistema.
+        }
+    } //Fim RNF06 SEGURANÇA
+
+    ID RNF07 DISTRIBUIÇÃO {
+        Descrição {
+            O sistema estará disponível para download na loja Google Play a custo zero.
+        }
+    } //Fim RNF07 DISTRIBUIÇÃO
+
+    ID RNF08 EFICIÊNCIA {
+        Descrição {
+            O sistema utiliza os recursos da melhor forma possível. Não ocupa muito espaço nos smartphones dos usuários, e dentro dos requisitos de software e hardware não apresenta problemas relativos ao seu uso.
+        }
+    } //Fim RNF08 EFICIÊNCIA
+
+    ID RNF09 EFICÁCIA {
+        Descrição {
+            O sistema cadastra os dados do usuário. Apresenta a listagem de usuários e suas características. Além disso, possibilita o usuário reservar espaços do IFAC. Assim, alcança os objetivos propostos.
+        }
+    } //Fim RNF09 EFICÁCIA
+
+    ID RNF10 EFETIVIDADE {
+        Descrição {
+            Não existe no IFAC nenhum aplicativo de reserva de espaços que possua as mesmas funcionalidades. Dessa forma, e de acordo com os testes realizados, os usuários se sentirão mais confortáveis para reservar locais com facilidade e poder utilizá-los como bem entender.
+        }
+    } //Fim RNF10 EFETIVIDADE
+
+} //Fim dos Requisitos Não Funcionais
