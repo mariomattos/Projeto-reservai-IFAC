@@ -86,7 +86,7 @@ Requisitos Funcionais {
         }
 
         Restrições {
-            O usuário ser administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
@@ -105,7 +105,7 @@ Requisitos Funcionais {
         }
 
         Restrições {
-            O usuário ser administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
@@ -143,7 +143,7 @@ Requisitos Funcionais {
         }
 
         Restrições {
-            O usuário ser administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
@@ -182,11 +182,11 @@ Requisitos Funcionais {
 
     ID RF10 CADASTRAR ESPAÇO {
         Descrição {
-            Permite a inclusão de um novo ambiente físico utilizável na base de dados da aplicação.
+            Possibilita o administrador cadastrar um espaço.
         }
 
         Restrições {
-            Acesso restrito ao Administrador. O espaço não deve possuir o mesmo nome ou identificador de um já existente.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
@@ -194,117 +194,124 @@ Requisitos Funcionais {
         }
 
         Resultado {
-            O sistema registrará o novo ambiente físico no banco de dados e o disponibilizará no catálogo de agendamentos, caso contrário, exibirá uma mensagem descrevendo o erro de duplicidade ou inconsistência nos dados de entrada.
+            Acessar a tela de gerenciamento de espaços e acionar a opção cadastrar espaço.
         }
     } //Fim RF10 CADASTRAR ESPAÇO
 
+
     ID RF11 LISTAR CADASTROS DE ESPAÇOS {
         Descrição {
-            Exibe um catálogo ou lista com todos os espaços e ambientes físicos registrados no sistema.
+            Possibilita o administrador acessar uma lista com todos os espaços cadastrados.
         }
 
         Restrições {
-            Nenhuma. Visível para todos os tipos de usuários da plataforma.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Acessar a seção de ambientes ou espaços no menu de navegação.
+            Acessar a tela de gerenciamento de espaços e acionar a opção listar cadastros de espaço.
         }
 
         Resultado {
-            O sistema renderizará a lista de espaços e suas principais características físicas em tela, caso contrário, exibirá uma mensagem de erro descrevendo a impossibilidade de carregar os dados no momento.
+            Será exibida uma lista com todos os espaços cadastrados. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF11 LISTAR CADASTROS DE ESPAÇOS
 
+
     ID RF12 CONSULTAR CADASTRO DE ESPAÇO {
         Descrição {
-            Apresenta as informações completas e detalhadas sobre a infraestrutura e regras de um espaço específico.
+            Possibilita o administrador consultar o cadastro de um espaço qualquer.
         }
 
         Restrições {
-            O espaço selecionado deve estar cadastrado no banco de dados.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Selecionar o espaço desejado a partir da listagem geral ou através de busca direta.
+            Acessar a tela de gerenciamento de espaços e acionar a opção consultar cadastro de espaço.
         }
 
         Resultado {
-            O sistema exibirá a página com especificações completas, fotos, capacidade e recursos do ambiente focado, caso contrário, exibirá uma mensagem alertando que o espaço está indisponível ou inexistente.
+            Será exibido o cadastro do espaço escolhido para consulta. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF12 CONSULTAR CADASTRO DE ESPAÇO
 
+
     ID RF13 ALTERAR CADASTRO DE ESPAÇO {
         Descrição {
-            Permite atualizar as informações, capacidades e detalhes físicos de um ambiente existente.
+            Possibilita o administrador alterar o cadastro de um espaço qualquer.
         }
 
         Restrições {
-            Acesso exclusivo ao perfil de Administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Modificar os dados do ambiente na tela de edição correspondente e confirmar o salvamento.
+            Acessar a tela de gerenciamento de espaços e acionar a opção alterar cadastro de espaço.
         }
 
         Resultado {
-            O sistema atualizará as configurações e a infraestrutura do espaço em sua base, caso contrário, exibirá uma mensagem descrevendo o erro cometido na edição dos campos ou valores inadequados.
+            Será exibida uma mensagem de sucesso e o cadastro do espaço escolhido será alterado. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF13 ALTERAR CADASTRO DE ESPAÇO
 
+
     ID RF14 EXCLUIR CADASTRO DE ESPAÇO {
         Descrição {
-            Remove em definitivo ou desativa as operações de agendamento de um ambiente do sistema.
+            Possibilita o administrador excluir o cadastro de um espaço qualquer.
         }
 
         Restrições {
-            Acesso restrito ao Administrador. O espaço não pode possuir reservas ativas ou pendentes no calendário futuro.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Acionar a opção de exclusão dentro do painel do ambiente e confirmar o aviso de segurança.
+            Acessar a tela de gerenciamento de espaços e acionar a opção excluir cadastro de espaço.
         }
 
         Resultado {
-            O sistema removerá o ambiente físico do catálogo público e indisponibilizará futuras consultas, caso contrário, exibirá uma mensagem alertando que o local possui agendamentos ativos vinculados.
+            Será exibida uma mensagem de sucesso e o cadastro do espaço escolhido será excluído da base de dados. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF14 EXCLUIR CADASTRO DE ESPAÇO
 
+
     ID RF15 VISUALIZAR FOTOS DO ESPAÇO {
         Descrição {
-            Exibe uma galeria de imagens vinculadas ao espaço para conferência de sua estrutura física.
+            Possibilita o usuário visualizar as fotos de um espaço qualquer.
         }
 
         Restrições {
-            O espaço consultado deve conter mídias/imagens previamente anexadas pelo administrador.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Clicar na seção de fotos ou sobre o carrossel de imagens contido nos detalhes do ambiente.
+            Acessar a tela de reservas e acionar a opção ver galeria do espaço.
         }
 
         Resultado {
-            O sistema expandirá o carrossel de fotos exibindo as mídias do ambiente em tela cheia, caso contrário, exibirá uma imagem padrão indicando falha no carregamento dos arquivos anexados.
+            Será exibida as fotos do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF15 VISUALIZAR FOTOS DO ESPAÇO
 
+
     ID RF16 FAVORITAR ESPAÇO {
         Descrição {
-            Permite marcar ambientes específicos para rápido acesso posterior através de uma lista personalizada.
+            Possibilita o usuário favoritar um espaço qualquer.
         }
 
         Restrições {
-            O usuário deve estar autenticado no sistema.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Clicar no ícone indicador de favoritos (ex: estrela ou coração) presente no card ou página do espaço.
+            Acessar a tela de reservas e acionar a opção favoritar espaço.
         }
 
         Resultado {
-            O sistema associará e indexará o espaço na lista de preferências rápidas da conta do usuário, caso contrário, exibirá uma mensagem informando que houve um erro na sincronização da ação.
+            Será exibida uma mensagem de sucesso e o espaço escolhido será favoritado. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF16 FAVORITAR ESPAÇO
+
 
 
     // ==========================================
@@ -313,129 +320,136 @@ Requisitos Funcionais {
 
     ID RF17 CADASTRAR RESERVA DE ESPAÇO {
         Descrição {
-            Registra uma nova intenção de uso para um espaço físico em data e horários determinados.
+            Possibilita o usuário cadastrar a reserva de um espaço qualquer.
         }
 
         Restrições {
-            O horário e o espaço escolhidos devem estar totalmente livres e livres de bloqueios na agenda.
+           O usuário estar logado no sistema.
         }
 
         Ações {
-            Selecionar o ambiente, definir data/hora de início e término e confirmar a solicitação.
+            Acessar a tela de algum espaço e acionar a opção cadastrar reserva de espaço.
         }
 
         Resultado {
-            O sistema criará o agendamento no calendário e o submeterá para a fila de validação, caso contrário, exibirá uma mensagem informando que há conflito de horários para o intervalo selecionado.
+            Será exibida uma mensagem de sucesso e a reserva do espaço escolhido será cadastrada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF17 CADASTRAR RESERVA DE ESPAÇO
 
+	
     ID RF18 ALTERAR RESERVA DE ESPAÇO {
         Descrição {
-            Modifica o período ou o local de uma reserva previamente registrada pelo próprio solicitante ou pelo administrador.
+            Possibilita o usuário alterar as informações da sua reserva de espaço.
         }
 
         Restrições {
-            O novo período pretendido deve estar disponível na agenda do ambiente físico correspondente.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Acessar a gerência de reservas, editar os parâmetros de tempo/espaço e confirmar a troca.
+            Acessar a tela de minhas reservas e acionar a opção alterar reserva de espaço.
         }
 
         Resultado {
-            O sistema atualizará os horários ou o ambiente físico daquela reserva no calendário central, caso contrário, exibirá uma mensagem informando que a modificação colide com restrições institucionais ou reservas já existentes.
+            Será exibida uma mensagem de sucesso e a reserva do espaço escolhido será alterada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF18 ALTERAR RESERVA DE ESPAÇO
 
+
     ID RF19 CANCELAR RESERVA DE ESPAÇO {
         Descrição {
-            Cancela e invalida uma reserva ativa, liberando o horário correspondente no calendário para novos agendamentos.
+            Possibilita o usuário cancelar sua reserva de um espaço qualquer.
         }
 
         Restrições {
-            O cancelamento deve obedecer ao limite de antecedência mínima configurado nas regras do sistema.
+            O usuário estar logado no sistema e possuir alguma reserva de espaço.
         }
 
         Ações {
-            Selecionar a reserva desejada no menu pessoal e acionar o comando de cancelamento.
+            Acessar a tela de minhas reservas e acionar a opção cancelar reserva de espaço.
         }
 
         Resultado {
-            O sistema invalidará a reserva e mudará seu status para cancelado liberando o horário na agenda, caso contrário, exibirá uma mensagem informando que o prazo de tolerância para cancelamentos expirou.
+            Será exibida uma mensagem de sucesso e a reserva do espaço escolhido será cancelada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF19 CANCELAR RESERVA DE ESPAÇO
 
+
     ID RF20 LISTAR RESERVAS DE ESPAÇOS {
         Descrição {
-            Lista os registros de agendamentos efetuados no sistema, exibindo solicitantes, locais e períodos temporais.
+            Possibilita o usuário acessar uma lista com suas reservas de espaço.
         }
 
         Restrições {
-            Usuários comuns visualizam apenas as suas reservas; Administradores visualizam a totalidade das reservas.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Navegar até a tela de controle ou histórico de agendamentos.
+            Acessar qualquer tela do sistema e acionar a opção minhas reservas.
         }
 
         Resultado {
-            O sistema apresentará uma tabela com todos os agendamentos e seus respectivos status de processamento, caso contrário, exibirá uma mensagem informando falha de autorização ou indisponibilidade de dados.
+            Será exibida uma lista com as reservas de espaço do usuário. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF20 LISTAR RESERVAS DE ESPAÇOS
 
+
     ID RF21 CONSULTAR RESERVA DE ESPAÇO {
         Descrição {
-            Exibe de forma detalhada as informações de uma reserva específica, incluindo histórico de aprovação e justificativas.
+            Possibilita o usuário consultar a reserva de um espaço.
         }
 
         Restrições {
-            O usuário deve possuir a reserva sob sua titularidade ou deter permissão administrativa.
+            O usuário estar logado no sistema e possuir alguma reserva de espaço.
         }
 
         Ações {
-            Clicar sobre uma reserva a partir do histórico ou por meio de notificação interna.
+            Acessar a tela minhas reservas e acionar a opção consultar reserva de espaço.
         }
 
         Resultado {
-            O sistema renderizará a tela com os dados completos de tempo, justificativa e o histórico da reserva, caso contrário, exibirá uma mensagem informando que o acesso a este agendamento é restrito ou inválido.
+            Será exibida as informações da reserva de espaço consultada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF21 CONSULTAR RESERVA DE ESPAÇO
 
-    ID RF22 CONSULTAR AGENDA DE RESERVAS DE UM ESPAÇO {
+
+    ID RF22 CONSULTAR AGENDA DE RESERVAS DE ESPAÇO {
         Descrição {
-            Apresenta uma visão unificada e cronológica (calendário semanal/mensal) de ocupação de um ambiente específico.
+            Possibilita o usuário consultar a agenda de reservas de um espaço qualquer.
         }
 
         Restrições {
-            Nenhuma. A agenda pública deve estar disponível para fins de transparência de horários.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Acessar a aba de agenda/calendário contida nas especificações do espaço desejado.
+            Acessar a tela de reserva de algum espaço e acionar a opção consultar agenda de reservas de espaço.
         }
 
         Resultado {
-            O sistema exibirá a grade de horários visual com a marcação dos blocos livres e ocupados daquele ambiente, caso contrário, exibirá uma mensagem descrevendo a falha de comunicação com o microsserviço de calendário.
+            Será exibida a agenda de reservas do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
-    } //Fim RF22 CONSULTAR AGENDA DE RESERVAS DE UM ESPAÇO
+    } //Fim RF22 CONSULTAR AGENDA DE RESERVAS DE ESPAÇO
 
-    ID RF23 ENTRAR NA LISTA DE ESPERA PRA RESERVA {
+
+    ID RF23 ENTRAR NA LISTA DE ESPERA PARA RESERVA {
         Descrição {
-            Adiciona o usuário a uma fila ordenada de prioridade caso o horário desejado em determinado espaço já esteja ocupado.
+            Possibilita o usuário entrar na lista de espera para reserva de um espaço qualquer.
         }
 
         Restrições {
-            O período selecionado precisa estar obrigatoriamente ocupado por outra reserva ativa de terceiro.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Solicitar a inclusão na fila de espera na tentativa de reservar um bloco temporal indisponível.
+            Acessar a tela de reserva de algum espaço e acionar a opção entrar na lista de espera para reserva.
         }
 
         Resultado {
-            O sistema registrará o usuário na posição sequencial correta da fila de espera daquele horário, caso contrário, exibirá uma mensagem alertando que a inclusão falhou por já haver uma solicitação idêntica e ativa.
+            Será exibida uma mensagem de sucesso e o usuário entrará na lista de espera para reserva do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF23 ENTRAR NA LISTA DE ESPERA PRA RESERVA
+
 
 
     // ==========================================
@@ -444,93 +458,98 @@ Requisitos Funcionais {
 
     ID RF24 BLOQUEAR RESERVA DO ESPAÇO POR PERÍODO {
         Descrição {
-            Interrompe de forma temporária a agenda de agendamentos de um local físico por razões técnicas ou institucionais.
+            Possibilita o administrador bloquear a reserva de um espaço qualquer por um período determinado.
         }
 
         Restrições {
-            Acesso exclusivo ao perfil de Administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Definir o local, o intervalo de tempo de início/fim do bloqueio e salvar a restrição.
+            Acessar a tela de gerenciamento de espaços e acionar a opção bloquear reserva do espaço por período.
         }
 
         Resultado {
-            O sistema invalidará novas reservas normais para o período e marcará o intervalo como bloqueado na agenda, caso contrário, exibirá uma mensagem alertando que a data de início informada é retroativa ou inválida.
+            Será exibida uma mensagem de sucesso e a reserva do espaço escolhido será bloqueada por um período determinado. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF24 BLOQUEAR RESERVA DO ESPAÇO POR PERÍODO
 
+
     ID RF25 DESBLOQUEAR RESERVAS DO ESPAÇO {
         Descrição {
-            Revoga um bloqueio temporário aplicado previamente a um espaço, reestabelecendo a normalidade de sua agenda.
+            Possibilita o administrador desbloquear a reserva de um espaço qualquer.
         }
 
         Restrições {
-            Acesso exclusivo ao Administrador. O período deve possuir um bloqueio ativo de antemão.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Selecionar o bloqueio em vigor na listagem de restrições do ambiente e acionar a liberação.
+            Acessar a tela de gerenciamento de espaços e acionar a opção desbloquear reserva do espaço.
         }
 
         Resultado {
-            O sistema removerá a restrição de calendário e reabrirá o ambiente para recebimento de novas requisições, caso contrário, exibirá uma mensagem indicando que o bloqueio não foi localizado ou já expirou.
+            Será exibida uma mensagem de sucesso e a reserva do espaço escolhido será desbloqueada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF25 DESBLOQUEAR RESERVAS DO ESPAÇO
 
-    ID RF26 APROVAR RESERVA DO ESPAÇO {
+
+    ID RF26 APROVAR RESERVA DE ESPAÇO {
         Descrição {
-            Valida e concede a autorização oficial de uso para um agendamento que se encontra no estado pendente.
+            Possibilita o administrador aprovar a reserva de um espaço qualquer.
         }
 
         Restrições {
-            Acesso restrito ao perfil Administrador. A reserva destino deve estar aguardando triagem.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Acessar a fila de triagem de agendamentos e clicar na opção de aprovação do registro.
+            Acessar a tela de gerenciamento de espaços e acionar a opção aprovar reserva de espaço.
         }
 
         Resultado {
-            O sistema alterará o status da reserva para aprovado e notificará o solicitante automaticamente, caso contrário, exibirá uma mensagem alertando que o agendamento possui inconsistências cronológicas ou passou do horário útil.
+            Será exibida uma mensagem de sucesso e a reserva de espaço escolhida será aprovada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
-    } //Fim RF26 APROVAR RESERVA DO ESPAÇO
+    } //Fim RF26 APROVAR RESERVA DE ESPAÇO
 
-    ID RF27 REPROVAR RESERVA DO ESPAÇO {
+
+    ID RF27 REPROVAR RESERVA DE ESPAÇO {
         Descrição {
-            Nega formalmente uma requisição pendente de reserva efetuada por um usuário da plataforma.
+            Possibilita o administrador reprovar a reserva de um espaço qualquer.
         }
 
         Restrições {
-            Acesso restrito ao Administrador. Exige o preenchimento de uma justificativa textual para a negativa.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Selecionar a opção de rejeição na fila de triagem e inserir a razão da recusa.
+            Acessar a tela de gerenciamento de espaços e acionar a opção de reprovar reserva de espaço.
         }
 
         Resultado {
-            O sistema salvará a recusa modificando o status da reserva para reprovado e enviando o feedback ao solicitante, caso contrário, exibirá uma mensagem obrigando o preenchimento do campo de justificativa.
+            Será exibida uma mensagem de sucesso e a reserva de espaço escolhida será reprovada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF27 REPROVAR RESERVA DO ESPAÇO
 
+
     ID RF28 DEFINIR REGRAS DE RESERVA POR ESPAÇO {
         Descrição {
-            Estabelece parâmetros de uso específicos para cada local (antecedência, perfis autorizados e limite de horas).
+            Possibilita o administrador definir regras de reserva de um espaço qualquer.
         }
 
         Restrições {
-            Permissão exclusiva de configuração dada a usuários com perfil de Administrador.
+            O usuário ser administrador e estar logado no sistema.
         }
 
         Ações {
-            Acessar o menu de políticas do ambiente, configure as restrições desejadas e salve o conjunto de regras.
+            Acessar a tela de gerenciamento de espaços e acionar a opção definir regras de reserva de espaço.
         }
 
         Resultado {
-            O sistema atualizará as diretrizes de governança e validação de agendamentos aplicadas àquele local, caso contrário, exibirá uma mensagem indicando incoerência ou erro de configuração matemática nos parâmetros de tempo.
+            Em caso de sucesso, exibirá uma mensagem de sucesso e o check-out será feito, caso contrário, exibirá mensagem descrevendo o erro.
         }
     } //Fim RF28 DEFINIR REGRAS DE RESERVA POR ESPAÇO
+
 
 
     // ==========================================
@@ -539,134 +558,141 @@ Requisitos Funcionais {
 
     ID RF29 REALIZAR CHECK-IN DE RESERVA {
         Descrição {
-            Confirma eletronicamente a presença física e o início de uso efetivo do espaço alocado.
+            Possibilita o usuário realizar check-in de reserva.
         }
 
         Restrições {
-            Deve ser executado dentro do raio geográfico ou na janela de tempo permitida para o início da reserva.
+            O usuário estar no local de sua reserva.
         }
 
         Ações {
-            Acionar o botão de check-in na reserva activa ou efetuar a leitura do código de presença no local (ex: QR Code).
+            Realizar biometria digital no local de sua reserva.
         }
 
         Resultado {
-            O sistema atualizará a reserva para o status em utilização e gravará a hora de entrada do usuário, caso contrário, exibirá uma mensagem informando que a janela de tempo ou a validação de presença falhou.
+            Será salvo o horário do check-in realizado pelo usuário. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF29 REALIZAR CHECK-IN DE RESERVA
 
+
     ID RF30 REALIZAR CHECK-OUT DE RESERVA {
         Descrição {
-            Registra formalmente o encerramento da utilização do espaço físico, liberando-o de forma antecipada ou pontual.
+            Possibilita o usuário realizar check-out de reserva.
         }
 
         Restrições {
-            A reserva correspondente deve estar com o status de em utilização ativo no sistema.
+            O usuário estar no local de sua reserva.
         }
 
         Ações {
-            Confirmar a saída do ambiente através da interface do aplicativo ou encerramento manual.
+            Realizar biometria digital no local de sua reserva.
         }
 
         Resultado {
-            O sistema finalizará a contagem de tempo da alocação mudando o status da reserva para concluída, caso contrário, exibirá uma mensagem indicando erro ao computar a saída ou duplicidade de requisição.
+            Será salvo o horário do check-out realizado pelo usuário. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF30 REALIZAR CHECK-OUT DE RESERVA
+
 
 
     // ==========================================
     // BLOCO 6: INTERFACE, ACESSIBILIDADE E ASSISTENTE
     // ==========================================
 
-    ID RF31 HABILITAR AGENTE INTELIGENTE/ASSISTENTE VIRTUAL {
+    ID RF31 HABILITAR ASSISTENTE VIRTUAL {
         Descrição {
-            Ativa a interface auxiliar guiada por Inteligência Artificial para suporte na navegação e busca de locais.
+            Possibilita o usuário habilitar o assistente virtual.
         }
 
         Restrições {
-            Nenhuma. O serviço deve estar operacional e disponível para a conta do usuário logado.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Acessar as preferências de interface ou clicar no ícone flutuante do assistente para ativá-lo.
+            Acessar qualquer tela e acionar a opção habilitar assistente virtual.
         }
 
         Resultado {
-            O sistema acionará e exibirá o componente flutuante do robô inteligente na tela da aplicação, caso contrário, exibirá uma mensagem informando que o serviço de IA externa está temporariamente inacessível.
+            Será exibida uma mensagem de sucesso e o assistente virtual será habilitado. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
-    } //Fim RF31 HABILITAR AGENTE INTELIGENTE/ASSISTENTE VIRTUAL
+    } //Fim RF31 HABILITAR ASSISTENTE VIRTUAL
 
-    ID RF32 DESABILITAR AGENTE INTELIGENTE/ASSISTENTE VIRTUAL {
+
+    ID RF32 DESABILITAR ASSISTENTE VIRTUAL {
         Descrição {
-            Oculta ou desliga a automação assistiva flutuante de suporte na interface visual do usuário.
+            Possibilita o usuário desabilitar o assistente virtual.
         }
 
         Restrições {
-            O assistente virtual deve estar em modo de exibição ativo no dispositivo.
+            O usuário estar logado no sistema.
         }
 
         Ações {
-            Clicar no botão de fechamento ou alternar a chave de ativação nas configurações do perfil.
+            Acessar qualquer tela e acionar a opção desabilitar assistente virtual.
         }
 
         Resultado {
-            O sistema fechará e interromperá as chamadas visuais do widget do assistente na tela do usuário, caso contrário, exibirá uma mensagem alertando sobre erro de estado interno e solicitará recarregar a página.
+            Será exibida uma mensagem de sucesso e o assistente virtual será desabilitado. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
-    } //Fim RF32 DESABILITAR AGENTE INTELIGENTE/ASSISTENTE VIRTUAL
+    } //Fim RF32 DESABILITAR ASSISTENTE VIRTUAL
+
 
     ID RF33 ALTERAR PARA O MODO ESCURO {
         Descrição {
-            Modifica a folha de estilos visuais da plataforma para uma paleta de cores de baixa luminosidade e tons escuros.
+            Possibilita o usuário alterar para o modo escuro.
         }
 
         Restrições {
-            O sistema deve estar operando sob o esquema de cores padrão ou claro.
+            Estar logado no sistema.
         }
 
         Ações {
-            Selecionar o botão de alternância de tema ou ativar a opção do Modo Escuro nas preferences.
+            Acessar a tela de acessibilidade e acionar a opção alterar para o modo escuro.
         }
 
         Resultado {
-            O sistema alternará instantaneamente a paleta cromática da interface do usuário para tons escuros, caso contrário, reverterá ao padrão notificando falha ao gravar as preferências de layout no armazenamento local.
+            O usuário irá alterar para o modo escuro. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF33 ALTERAR PARA O MODO ESCURO
 
+
     ID RF34 ALTERAR PARA O MODO CLARO {
         Descrição {
-            Restaura o tema cromático tradicional da interface da aplicação utilizando fundos claros e alta luminosidade.
+            Possibilita o usuário alterar para o modo claro.
         }
 
         Restrições {
-            O sistema deve estar operando sob o esquema de cores do modo escuro.
+            Estar logado no sistema.
         }
 
         Ações {
-            Selecionar a opção correspondente ao Modo Claro nas configurações de personalização visual.
+            Acessar a tela de acessibilidade e acionar a opção alterar para o modo claro.
         }
 
         Resultado {
-            O sistema modificará a interface aplicando os estilos e esquemas de cores de alta iluminação padrão, caso contrário, exibirá uma mensagem sugerindo a atualização manual da página por travamento de renderização.
+            O usuário irá alterar para o modo claro. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF34 ALTERAR PARA O MODO CLARO
 
+
     ID RF35 DEFINIR ESCALONAMENTO DE FONTE {
         Descrição {
-            Aumenta ou reduz de forma proporcional a escala de tamanho dos textos exibidos nas interfaces do software.
+            Possibilita o usuário definir o escalonamento de fonte.
         }
 
         Restrições {
-            O redimensionamento deve respeitar as proporções mínimas e máximas de legibilidade de layout definidas.
+            Estar logado no sistema.
         }
 
         Ações {
-            Utilizar os controles de tamanho de fonte nas opções de acessibilidade para ajustar o nível do texto.
+            Acessar a tela de acessibilidade, acionar a opção definir escalonamento de fonte e escolher o tamanho desejado.
         }
 
         Resultado {
-            O sistema ajustará de forma harmônica a tipografia de todas as telas conforme o nível escolhido, caso contrário, manterá o tamanho atual emitindo uma mensagem de que o limite crítico de layout foi atingido.
+            O escalonamento de fonte será alterado de acordo com o tamanho escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF35 DEFINIR ESCALONAMENTO DE FONTE
+
 
 
     // ==========================================
@@ -675,128 +701,115 @@ Requisitos Funcionais {
 
     ID RF36 AVALIAR ESPAÇO {
         Descrição {
-            Permite registrar uma nota numérica e comentários sobre a experiência de uso de um ambiente físico.
+            Possibilita o usuário avaliar um espaço qualquer.
         }
 
         Restrições {
-            O usuário deve ter completado e realizado com sucesso o check-out de uma reserva prévia naquele ambiente.
+            Estar logado no sistema.
         }
 
         Ações {
-            Atribuir uma nota em escala estrelar, redigir uma crítica opcional e enviar a avaliação no formulário.
+            Acessar a tela de reserva de algum espaço, acionar a opção avaliar espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema computará a pontuação informada e recalculará a média geral de reputação do local físico, caso contrário, exibirá uma mensagem de erro alertando que o envio foi bloqueado por ausência de check-out válido no histórico.
+            A avaliação será salva na base de dados. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF36 AVALIAR ESPAÇO
 
+
     ID RF37 EDITAR AVALIAÇÃO DO ESPAÇO {
         Descrição {
-            Permite ao autor de uma crítica cadastrada modificar o teor de seu texto ou nota de pontuação.
+            Possibilita o usuário editar sua avaliação de algum espaço.
         }
 
         Restrições {
-            A alteração só pode ser efetuada na avaliação de propriedade do próprio usuário autenticado.
+            Estar logado no sistema e possuir alguma avaliação de espaço.
         }
 
         Ações {
-            Localizar a avaliação enviada no histórico de opiniões, alterar os campos e salvar.
+            Acessar a tela de avaliações de algum espaço, acionar a opção editar avaliação do espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema substituirá a nota e o texto descritivo anteriores pelos novos dados preenchidos na base, caso contrário, exibirá uma mensagem informando que a crítica foi bloqueada ou moderada previamente, impossibilitando a edição.
+            A avaliação do espaço será editada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF37 EDITAR AVALIAÇÃO DO ESPAÇO
 
+
     ID RF38 LISTAR AVALIAÇÕES DE ESPAÇOS {
         Descrição {
-            Gera uma exibição consolidada de todas as pontuações e relatos deixados pelos frequentadores dos ambientes.
+            Possibilita o usuário acessar uma lista de avaliações de um espaço qualquer.
         }
 
         Restrições {
-            Devem existir avaliações registradas na base de dados para que a listagem não retorne vazia.
+            Estar logado no sistema.
         }
 
         Ações {
-            Acessar a seção pública de avaliações gerais ou o painel gerencial correspondente.
+            Acessar a tela de reserva de algum espaço e acionar a opção listar avaliações de espaço.
         }
 
         Resultado {
-            O sistema renderizará a linha do tempo cronológica com o feedback textual e as estrelas recebidas pelos ambientes, caso contrário, exibirá uma mensagem descrevendo falha de conexão na busca de relatos.
+            Será exibida uma lista com as avaliações do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF38 LISTAR AVALIAÇÕES DE ESPAÇOS
 
+
     ID RF39 CONSULTAR AVALIAÇÃO DO ESPAÇO {
         Descrição {
-            Filtra e exibe detalhadamente as notas e opiniões dadas exclusivamente sobre um único ambiente selecionado.
+            Possibilita o usuário consultar uma avaliação de um espaço qualquer.
         }
 
         Restrições {
-            O espaço alvo do filtro deve estar devidamente identificado na consulta.
+            Estar logado no sistema.
         }
 
         Ações {
-            Abrir a aba de avaliações inserida na página de exibição de dados de um determinado espaço físico.
+            Acessar a tela de avaliações de algum espaço, acionar a opção consultar avaliação do espaço e selecionar uma avaliação.
         }
 
         Resultado {
-            O sistema isolará e exibirá o conjunto de reviews e notas atribuídos especificamente ao local pesquisado, caso contrário, apresentará uma caixa de busca limpa indicando que o filtro de busca aplicado é inválido.
+            Será exibida na tela as informações da avaliação escolhida. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF39 CONSULTAR AVALIAÇÃO DO ESPAÇO
 
+
     ID RF40 ABRIR CHAT INTERNO ENTRE USUÁRIO E ADMIN {
         Descrição {
-            Inicia um canal de mensagens textuais diretas e em tempo real para comunicação de suporte e esclarecimentos.
+            Possibilita o usuário abrir um chat interno com o administrador.
         }
 
         Restrições {
-            O usuário necessita estar autenticado na plataforma para estabelecer a comunicação de suporte.
+            Estar logado no sistema.
         }
 
         Ações {
-            Acessar a central de ajuda ou mensagens e redigir uma mensagem de abertura de atendimento.
+            Acessar tela de ajuda e acionar a opção abrir chat interno entre usuário e admin.
         }
 
         Resultado {
-            O sistema abrirá a sala de bate-papo indexando a conversa à mesa de suporte da administração de TI, caso contrário, exibirá uma mensagem alertando sobre falha na conexão do canal de chat em tempo real.
+            Será aberto um chat interno entre o usuário e o administrador. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF40 ABRIR CHAT INTERNO ENTRE USUÁRIO E ADMIN
 
+
     ID RF41 REPORTAR PROBLEMA NO ESPAÇO {
         Descrição {
-            Permite notificar falhas estruturais, de limpeza ou danos em equipamentos de um ambiente para manutenção técnica.
+            Possibilita o usuário reportar problema em um espaço qualquer.
         }
 
         Restrições {
-            O usuário deve relatar falhas relacionadas a um ambiente físico existente no catálogo do sistema.
+            Estar logado no sistema.
         }
 
         Ações {
-            Preencher o formulário de incidentes do espaço detalhando o ocorrido e opcionalmente anexar fotos.
+            Acessar a tela de algum espaço, acionar a opção reportar problema no espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema criará uma ordem de serviço de reparo encaminhando o chamado para a gerência operacional, caso contrário, exibirá uma mensagem informando insuficiência de caracteres na descrição ou preenchimento incorreto.
+            O problema será reportado para os administradores. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF41 REPORTAR PROBLEMA NO ESPAÇO
-
-    ID RF42 LIMITAR RESERVAS SIMULTÂNEAS POR USUÁRIO/ESPAÇO {
-        Descrição {
-            Garante a aplicação de regras computacionais automatizadas que travam agendamentos abusivos ou em paralelo por um mesmo indivíduo.
-        }
-
-        Restrições {
-            A regra deve ser validada sistemicamente pelo motor de regras em toda tentativa de criação de reserva (`RF17`).
-        }
-
-        Ações {
-            O sistema faz a contagem de agendamentos em aberto do usuário no momento em que ele submete um novo pedido.
-        }
-
-        Resultado {
-            O sistema aceitará o processamento da reserva por estar dentro do quantitativo de cota permitida, caso contrário, bloqueará a transação exibindo uma mensagem notificando que o teto limite máximo de reservas do usuário foi alcançado.
-        }
-    } //Fim RF42 LIMITAR RESERVAS SIMULTÂNEAS POR USUÁRIO/ESPAÇO
 
 } //Fim dos Requisitos Funcionais
