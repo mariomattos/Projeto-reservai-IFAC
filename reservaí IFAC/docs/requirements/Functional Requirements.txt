@@ -639,57 +639,60 @@ Requisitos Funcionais {
 
     ID RF33 ALTERAR PARA O MODO ESCURO {
         Descrição {
-            Modifica a folha de estilos visuais da plataforma para uma paleta de cores de baixa luminosidade e tons escuros.
+            Possibilita o usuário alterar para o modo escuro.
         }
 
         Restrições {
-            O sistema deve estar operando sob o esquema de cores padrão ou claro.
+            Estar logado no sistema.
         }
 
         Ações {
-            Selecionar o botão de alternância de tema ou ativar a opção do Modo Escuro nas preferences.
+            Acessar a tela de acessibilidade e acionar a opção alterar para o modo escuro.
         }
 
         Resultado {
-            O sistema alternará instantaneamente a paleta cromática da interface do usuário para tons escuros, caso contrário, reverterá ao padrão notificando falha ao gravar as preferências de layout no armazenamento local.
+            O usuário irá alterar para o modo escuro. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF33 ALTERAR PARA O MODO ESCURO
 
+
     ID RF34 ALTERAR PARA O MODO CLARO {
         Descrição {
-            Restaura o tema cromático tradicional da interface da aplicação utilizando fundos claros e alta luminosidade.
+            Possibilita o usuário alterar para o modo claro.
         }
 
         Restrições {
-            O sistema deve estar operando sob o esquema de cores do modo escuro.
+            Estar logado no sistema.
         }
 
         Ações {
-            Selecionar a opção correspondente ao Modo Claro nas configurações de personalização visual.
+            Acessar a tela de acessibilidade e acionar a opção alterar para o modo claro.
         }
 
         Resultado {
-            O sistema modificará a interface aplicando os estilos e esquemas de cores de alta iluminação padrão, caso contrário, exibirá uma mensagem sugerindo a atualização manual da página por travamento de renderização.
+            O usuário irá alterar para o modo claro. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF34 ALTERAR PARA O MODO CLARO
 
+
     ID RF35 DEFINIR ESCALONAMENTO DE FONTE {
         Descrição {
-            Aumenta ou reduz de forma proporcional a escala de tamanho dos textos exibidos nas interfaces do software.
+            Possibilita o usuário definir o escalonamento de fonte.
         }
 
         Restrições {
-            O redimensionamento deve respeitar as proporções mínimas e máximas de legibilidade de layout definidas.
+            Estar logado no sistema.
         }
 
         Ações {
-            Utilizar os controles de tamanho de fonte nas opções de acessibilidade para ajustar o nível do texto.
+            Acessar a tela de acessibilidade, acionar a opção definir escalonamento de fonte e escolher o tamanho desejado.
         }
 
         Resultado {
-            O sistema ajustará de forma harmônica a tipografia de todas as telas conforme o nível escolhido, caso contrário, manterá o tamanho atual emitindo uma mensagem de que o limite crítico de layout foi atingido.
+            O escalonamento de fonte será alterado de acordo com o tamanho escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF35 DEFINIR ESCALONAMENTO DE FONTE
+
 
 
     // ==========================================
@@ -698,128 +701,115 @@ Requisitos Funcionais {
 
     ID RF36 AVALIAR ESPAÇO {
         Descrição {
-            Permite registrar uma nota numérica e comentários sobre a experiência de uso de um ambiente físico.
+            Possibilita o usuário avaliar um espaço qualquer.
         }
 
         Restrições {
-            O usuário deve ter completado e realizado com sucesso o check-out de uma reserva prévia naquele ambiente.
+            Estar logado no sistema.
         }
 
         Ações {
-            Atribuir uma nota em escala estrelar, redigir uma crítica opcional e enviar a avaliação no formulário.
+            Acessar a tela de reserva de algum espaço, acionar a opção avaliar espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema computará a pontuação informada e recalculará a média geral de reputação do local físico, caso contrário, exibirá uma mensagem de erro alertando que o envio foi bloqueado por ausência de check-out válido no histórico.
+            A avaliação será salva na base de dados. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF36 AVALIAR ESPAÇO
 
+
     ID RF37 EDITAR AVALIAÇÃO DO ESPAÇO {
         Descrição {
-            Permite ao autor de uma crítica cadastrada modificar o teor de seu texto ou nota de pontuação.
+            Possibilita o usuário editar sua avaliação de algum espaço.
         }
 
         Restrições {
-            A alteração só pode ser efetuada na avaliação de propriedade do próprio usuário autenticado.
+            Estar logado no sistema e possuir alguma avaliação de espaço.
         }
 
         Ações {
-            Localizar a avaliação enviada no histórico de opiniões, alterar os campos e salvar.
+            Acessar a tela de avaliações de algum espaço, acionar a opção editar avaliação do espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema substituirá a nota e o texto descritivo anteriores pelos novos dados preenchidos na base, caso contrário, exibirá uma mensagem informando que a crítica foi bloqueada ou moderada previamente, impossibilitando a edição.
+            A avaliação do espaço será editada. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF37 EDITAR AVALIAÇÃO DO ESPAÇO
 
+
     ID RF38 LISTAR AVALIAÇÕES DE ESPAÇOS {
         Descrição {
-            Gera uma exibição consolidada de todas as pontuações e relatos deixados pelos frequentadores dos ambientes.
+            Possibilita o usuário acessar uma lista de avaliações de um espaço qualquer.
         }
 
         Restrições {
-            Devem existir avaliações registradas na base de dados para que a listagem não retorne vazia.
+            Estar logado no sistema.
         }
 
         Ações {
-            Acessar a seção pública de avaliações gerais ou o painel gerencial correspondente.
+            Acessar a tela de reserva de algum espaço e acionar a opção listar avaliações de espaço.
         }
 
         Resultado {
-            O sistema renderizará a linha do tempo cronológica com o feedback textual e as estrelas recebidas pelos ambientes, caso contrário, exibirá uma mensagem descrevendo falha de conexão na busca de relatos.
+            Será exibida uma lista com as avaliações do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF38 LISTAR AVALIAÇÕES DE ESPAÇOS
 
+
     ID RF39 CONSULTAR AVALIAÇÃO DO ESPAÇO {
         Descrição {
-            Filtra e exibe detalhadamente as notas e opiniões dadas exclusivamente sobre um único ambiente selecionado.
+            Possibilita o usuário consultar uma avaliação de um espaço qualquer.
         }
 
         Restrições {
-            O espaço alvo do filtro deve estar devidamente identificado na consulta.
+            Estar logado no sistema.
         }
 
         Ações {
-            Abrir a aba de avaliações inserida na página de exibição de dados de um determinado espaço físico.
+            Acessar a tela de avaliações de algum espaço, acionar a opção consultar avaliação do espaço e selecionar uma avaliação.
         }
 
         Resultado {
-            O sistema isolará e exibirá o conjunto de reviews e notas atribuídos especificamente ao local pesquisado, caso contrário, apresentará uma caixa de busca limpa indicando que o filtro de busca aplicado é inválido.
+            Será exibida na tela as informações da avaliação escolhida. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF39 CONSULTAR AVALIAÇÃO DO ESPAÇO
 
+
     ID RF40 ABRIR CHAT INTERNO ENTRE USUÁRIO E ADMIN {
         Descrição {
-            Inicia um canal de mensagens textuais diretas e em tempo real para comunicação de suporte e esclarecimentos.
+            Possibilita o usuário abrir um chat interno com o administrador.
         }
 
         Restrições {
-            O usuário necessita estar autenticado na plataforma para estabelecer a comunicação de suporte.
+            Estar logado no sistema.
         }
 
         Ações {
-            Acessar a central de ajuda ou mensagens e redigir uma mensagem de abertura de atendimento.
+            Acessar tela de ajuda e acionar a opção abrir chat interno entre usuário e admin.
         }
 
         Resultado {
-            O sistema abrirá a sala de bate-papo indexando a conversa à mesa de suporte da administração de TI, caso contrário, exibirá uma mensagem alertando sobre falha na conexão do canal de chat em tempo real.
+            Será aberto um chat interno entre o usuário e o administrador. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF40 ABRIR CHAT INTERNO ENTRE USUÁRIO E ADMIN
 
+
     ID RF41 REPORTAR PROBLEMA NO ESPAÇO {
         Descrição {
-            Permite notificar falhas estruturais, de limpeza ou danos em equipamentos de um ambiente para manutenção técnica.
+            Possibilita o usuário reportar problema em um espaço qualquer.
         }
 
         Restrições {
-            O usuário deve relatar falhas relacionadas a um ambiente físico existente no catálogo do sistema.
+            Estar logado no sistema.
         }
 
         Ações {
-            Preencher o formulário de incidentes do espaço detalhando o ocorrido e opcionalmente anexar fotos.
+            Acessar a tela de algum espaço, acionar a opção reportar problema no espaço e preencher as informações necessárias.
         }
 
         Resultado {
-            O sistema criará uma ordem de serviço de reparo encaminhando o chamado para a gerência operacional, caso contrário, exibirá uma mensagem informando insuficiência de caracteres na descrição ou preenchimento incorreto.
+            O problema será reportado para os administradores. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF41 REPORTAR PROBLEMA NO ESPAÇO
-
-    ID RF42 LIMITAR RESERVAS SIMULTÂNEAS POR USUÁRIO/ESPAÇO {
-        Descrição {
-            Garante a aplicação de regras computacionais automatizadas que travam agendamentos abusivos ou em paralelo por um mesmo indivíduo.
-        }
-
-        Restrições {
-            A regra deve ser validada sistemicamente pelo motor de regras em toda tentativa de criação de reserva (`RF17`).
-        }
-
-        Ações {
-            O sistema faz a contagem de agendamentos em aberto do usuário no momento em que ele submete um novo pedido.
-        }
-
-        Resultado {
-            O sistema aceitará o processamento da reserva por estar dentro do quantitativo de cota permitida, caso contrário, bloqueará a transação exibindo uma mensagem notificando que o teto limite máximo de reservas do usuário foi alcançado.
-        }
-    } //Fim RF42 LIMITAR RESERVAS SIMULTÂNEAS POR USUÁRIO/ESPAÇO
 
 } //Fim dos Requisitos Funcionais
