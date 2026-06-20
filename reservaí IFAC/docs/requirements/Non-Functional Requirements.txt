@@ -34,7 +34,7 @@ Requisitos Não Funcionais {
 
     ID RNF05 PORTABILIDADE {
         Descrição {
-            A aplicação mobile deve ser compatible com dispositivos móveis que executem o sistema operacional Android 7.0 (API 24) ou superior, garantindo retrocompatibilidade com aparelhos de gerações anteriores.
+            A aplicação mobile deve ser compatível com dispositivos móveis que executem o sistema operacional Android 7.0 (API 24) ou superior, garantindo retrocompatibilidade com aparelhos de gerações anteriores.
         }
     } //Fim RNF05 PORTABILIDADE
 
@@ -313,7 +313,7 @@ Requisitos Não Funcionais {
 
     ID RNF42 SISTEMA DE FILA FIFO PARA LISTA DE ESPERA {
         Descrição {
-            O gerenciamento lúdico da lista de espera para reservas de ambientes deve seguir estritamente o critério FIFO (First-In, First-Out), garantindo que a vaga liberada seja ofertada prioritariamente ao usuário mais antigo na fila.
+            O gerenciamento lógico da lista de espera para reservas de ambientes deve seguir estritamente o critério FIFO (First-In, First-Out), garantindo que a vaga liberada seja ofertada prioritariamente ao usuário mais antigo na fila.
         }
     } //Fim RNF42 SISTEMA DE FILA FIFO PARA LISTA DE ESPERA
 
@@ -364,11 +364,11 @@ Requisitos Não Funcionais {
     } //Fim RNF48 ARQUIVAMENTO HISTÓRICO DE DADOS
 
 
-    ID RNF49 SINCRO_HORÁRIA E FORMATOS INSTITUCIONAIS {
+    ID RNF49 SINCRONIA HORÁRIA E FORMATOS INSTITUCIONAIS {
         Descrição {
             O sistema deve operar em sincronia com o fuso horário oficial do Estado do Acre (GMT-5) e os formatos de exibição padrão do Brasil: datas em DD/MM/AAAA e horários em formato de 24 horas (HH:MM).
         }
-    } //Fim RNF49 SINCRO_HORÁRIA E FORMATOS INSTITUCIONAIS
+    } //Fim RNF49 SINCRONIA HORÁRIA E FORMATOS INSTITUCIONAIS
 
 
     ID RNF50 INDEPENDÊNCIA DE LICENCIAMENTO COMERCIAL {
