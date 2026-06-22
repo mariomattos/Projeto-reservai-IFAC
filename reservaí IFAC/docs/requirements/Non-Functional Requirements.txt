@@ -11,58 +11,58 @@ Requisitos Não Funcionais {
     } //Fim RNF01 USABILIDADE
 
 
-    ID RNF02 TECNOLOGIA PARA DISPOSITIVOS MÓVEIS {
+    ID RNF02 TECNOLOGIA BASE DA APLICAÇÃO {
         Descrição {
-            A aplicação mobile deve ser desenvolvida utilizando o framework híbrido React Native, integrando-se diretamente ao ecossistema NoSQL do Firebase para gerenciamento e persistência de dados.
+            A aplicação web deve ser desenvolvida utilizando a linguagem PHP no ambiente servidor, integrando-se diretamente ao sistema de gerenciamento de banco de dados relacional MySQL para persistência de dados.
         }
-    } //Fim RNF02 TECNOLOGIA PARA DISPOSITIVOS MÓVEIS
+    } //Fim RNF02 TECNOLOGIA BASE DA APLICAÇÃO
 
 
     ID RNF03 ARMAZENAMENTO {
         Descrição {
-            O armazenamento centralizado de documentos, logs, dados cadastrais e mídias da aplicação deve ser realizado utilizando os serviços Firestore e Cloud Storage do Firebase.
+            O armazenamento centralizado de documentos, dados cadastrais e mídias da aplicação deve ser realizado utilizando tabelas estruturadas no banco de dados MySQL e diretórios seguros no servidor de hospedagem web.
         }
     } //Fim RNF03 ARMAZENAMENTO
 
 
-    ID RNF04 DISPONIBILIDADE DA DISTRIBUIÇÃO {
+    ID RNF04 DISPONIBILIDADE DO SITE {
         Descrição {
-            O pacote de instalação da aplicação mobile deve permanecer disponível para download na Google Play Store 24 (vinte e quatro) horas por dia, 7 dias por semana.
+            O site deve permanecer disponível para acesso via internet 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana, através do servidor de hospedagem institucional.
         }
-    } //Fim RNF04 DISPONIBILIDADE DA DISTRIBUIÇÃO
+    } //Fim RNF04 DISPONIBILIDADE DO SITE
 
 
-    ID RNF05 PORTABILIDADE {
+    ID RNF05 PORTABILIDADE E COMPATIBILIDADE {
         Descrição {
-            A aplicação mobile deve ser compatível com dispositivos móveis que executem o sistema operacional Android 7.0 (API 24) ou superior, garantindo retrocompatibilidade com aparelhos de gerações anteriores.
+            O site deve ser compatível e renderizado corretamente em qualquer sistema operacional (Windows, Linux, macOS, Android e iOS) que possua um navegador web moderno instalado.
         }
-    } //Fim RNF05 PORTABILIDADE
+    } //Fim RNF05 PORTABILIDADE E COMPATIBILIDADE
 
 
     ID RNF06 SEGURANÇA DE ACESSO {
         Descrição {
-            O acesso às coleções de dados e endpoints do servidor deve ser blindado por regras de segurança nativas do Firebase e autenticação criptográfica de usuários.
+            O acesso às tabelas do banco de dados MySQL e aos endpoints/scripts PHP do servidor deve ser blindado por regras de autenticação controladas pelo backend, criptografia de senhas e prevenção contra injeções de código.
         }
     } //Fim RNF06 SEGURANÇA DE ACESSO
 
 
-    ID RNF07 CUSTO DE DISTRIBUIÇÃO {
+    ID RNF07 CUSTO DE ACESSO {
         Descrição {
-            O aplicativo deve ser disponibilizado nas lojas digitais de forma totalmente gratuita (custo zero de download e uso) para a comunidade acadêmica.
+            O site deve ser disponibilizado de forma totalmente gratuita (custo zero de acesso e uso) para toda a comunidade acadêmica do IFAC.
         }
-    } //Fim RNF07 CUSTO DE DISTRIBUIÇÃO
+    } //Fim RNF07 CUSTO DE ACESSO
 
 
-    ID RNF08 EFICIÊNCIA DE HARDWARE {
+    ID RNF08 EFICIÊNCIA DE HARDWARE DO SERVIDOR {
         Descrição {
-            O sistema deve otimizar o uso de recursos locais do smartphone, limitando o consumo de bateria, armazenamento interno físico e processamento de forma a evitar superaquecimento ou travamentos.
+            Os scripts em PHP devem ser otimizados para garantir o uso eficiente dos recursos do servidor de hospedagem, limitando o consumo de memória e processamento para evitar sobrecarga no ambiente de produção.
         }
-    } //Fim RNF08 EFICIÊNCIA DE HARDWARE
+    } //Fim RNF08 EFICIÊNCIA DE HARDWARE DO SERVIDOR
 
 
     ID RNF09 EFICÁCIA DE NEGÓCIO {
         Descrição {
-            O sistema deve garantir o cumprimento integral das metas de automação de reservas do IFAC, consolidando o controle de fluxos, listagens e gerenciamento de ambientes sem perda de dados.
+            O sistema deve garantir o cumprimento integral das metas de automação de reservas do IFAC, consolidando o controle de fluxos, listagens e gerenciamento de ambientes no banco de dados MySQL sem perda de informações.
         }
     } //Fim RNF09 EFICÁCIA DE NEGÓCIO
 
@@ -80,51 +80,51 @@ Requisitos Não Funcionais {
 
     ID RNF11 ACESSIBILIDADE WCAG {
         Descrição {
-            A interface das versões Web e Mobile deve seguir as diretrizes do WCAG 2.1 (Web Content Accessibility Guidelines) no nível AA, garantindo navegação adequada para pessoas com deficiências visuais ou motoras.
+            A interface do site deve seguir as diretrizes do WCAG 2.1 (Web Content Accessibility Guidelines) no nível AA, garantindo navegação adequada para pessoas com deficiências visuais ou motoras.
         }
     } //Fim RNF11 ACESSIBILIDADE WCAG
 
 
     ID RNF12 COMPATIBILIDADE COM LEITORES DE TELA {
         Descrição {
-            Todos os componentes visuais desenvolvidos em React Native devem possuir propriedades de acessibilidade nativas preenchidas (como 'accessibilityLabel') para funcionar perfeitamente com o Google TalkBack e Apple VoiceOver.
+            Todos os componentes visuais desenvolvidos no código HTML/CSS do site devem possuir propriedades e tags de acessibilidade nativas preenchidas para funcionar perfeitamente com leitores de tela padrão de mercado.
         }
     } //Fim RNF12 COMPATIBILIDADE COM LEITORES DE TELA
 
 
     ID RNF13 CONTRASTE MÍNIMO DE INTERFACE {
         Descrição {
-            A paleta de cores do sistema deve obedecer a uma taxa de contraste mínima de 4.5:1 para elementos de texto convencionais em relação ao fundo, tanto no modo claro quanto no modo escuro.
+            A paleta de cores do site deve obedecer a uma taxa de contraste mínima de 4.5:1 para elementos de texto convencionais em relação ao fundo, tanto no modo claro quanto no modo escuro.
         }
     } //Fim RNF13 CONTRASTE MÍNIMO DE INTERFACE
 
 
     ID RNF14 CURVA DE APRENDIZADO {
         Descrição {
-            Um usuário sem treinamento prévio deve ser capaz de concluir com sucesso o fluxo completo de reserva de um espaço em menos de 3 minutos no seu primeiro acesso.
+            Um usuário sem treinamento prévio deve ser capaz de concluir com sucesso o fluxo completo de reserva de um espaço em menos de 3 minutos no seu primeiro acesso ao site.
         }
     } //Fim RNF14 CURVA DE APRENDIZADO
 
 
     ID RNF15 IDIOMA DO SISTEMA {
         Descrição {
-            Toda a interface do usuário, mensagens de erro, notificações institucionais, e-mails e respostas do assistente virtual devem estar obrigatoriamente localizados no idioma Português do Brasil (pt-BR).
+            Toda a interface do usuário, mensagens de erro, notificações institucionais, e-mails e respostas do assistente virtual do site devem estar obrigatoriamente localizados no idioma Português do Brasil (pt-BR).
         }
     } //Fim RNF15 IDIOMA DO SISTEMA
 
 
     ID RNF16 FEEDBACK DE OPERAÇÕES DA INTERFACE {
         Descrição {
-            Qualquer ação executada pelo usuário (como favoritar, avaliar ou reservar) deve emitir uma resposta visual amigável na tela (via Toast ou pop-up informativo) em um tempo máximo de 500 milissegundos.
+            Qualquer ação executada pelo usuário no site (como favoritar, avaliar ou reservar) deve emitir uma resposta visual amigável na tela em um tempo máximo de 500 milissegundos.
         }
     } //Fim RNF16 FEEDBACK DE OPERAÇÕES DA INTERFACE
 
 
-    ID RNF17 COERÊNCIA VISUAL ENTRE PLATAFORMAS {
+    ID RNF17 COERÊNCIA VISUAL DO SITE {
         Descrição {
-            A identidade visual, paleta de cores institucional do IFAC e disposição dos menus devem manter um padrão uniforme entre a versão executada no navegador web e o aplicativo mobile.
+            A identidade visual, paleta de cores institucional do IFAC e disposição dos menus devem manter um padrão uniforme em todas as páginas, painéis e seções do site.
         }
-    } //Fim RNF17 COERÊNCIA VISUAL ENTRE PLATAFORMAS
+    } //Fim RNF17 COERÊNCIA VISUAL DO SITE
 
 
     // ==========================================
@@ -133,35 +133,35 @@ Requisitos Não Funcionais {
 
     ID RNF18 COMPATIBILIDADE DE NAVEGADORES WEB {
         Descrição {
-            A versão Web do Reservaí deve ser totalmente funcional nos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari, sem depender da instalação de extensões proprietárias.
+            O site do Reservaí deve ser totalmente funcional nos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari, sem depender da instalação de extensões proprietárias.
         }
     } //Fim RNF18 COMPATIBILIDADE DE NAVEGADORES WEB
 
 
     ID RNF19 DESIGN RESPONSIVO WEB {
         Descrição {
-            O painel web administrativo e de consultas deve adaptar seu layout de forma fluida a telas com resoluções que variam desde 320px (smartphones antigos) até 1920px (monitores de alta definição).
+            O site deve adaptar seu layout de forma fluida através de CSS responsivo a telas com resoluções que variam desde 320px até 1920px.
         }
     } //Fim RNF19 DESIGN RESPONSIVO WEB
 
 
-    ID RNF20 DEPENDÊNCIA DO ECOSSISTEMA FIREBASE {
+    ID RNF20 DEPENDÊNCIA DA INFRAESTRUTURA DE SERVIDOR {
         Descrição {
-            A aplicação deve utilizar exclusivamente os serviços gerenciados do ecossistema Firebase (Firestore, Authentication, Cloud Messaging e Storage) para eliminar custos com servidores e infraestrutura física local.
+            A aplicação deve utilizar a infraestrutura de servidor web padrão integrada ao interpretador PHP e ao banco MySQL, permitindo a hospedagem local nos servidores do IFAC ou em serviços de nuvem tradicionais.
         }
-    } //Fim RNF20 DEPENDÊNCIA DO ECOSSISTEMA FIREBASE
+    } //Fim RNF20 DEPENDÊNCIA DA INFRAESTRUTURA DE SERVIDOR
 
 
     ID RNF21 PARIDADE FUNCIONAL {
         Descrição {
-            A distribuição híbrida do sistema deve garantir que as principais funções de agendamento e consulta de agendas estejam disponíveis com a mesma precisão de dados, independente do dispositivo utilizado.
+            O site deve garantir que todas as funções de agendamento e consulta de agendas estejam disponíveis com a mesma precisão de dados, independente de ser acessado por um computador desktop ou por um navegador mobile.
         }
     } //Fim RNF21 PARIDADE FUNCIONAL
 
 
     ID RNF22 ISOLAMENTO DE ESTILOS DA INTERFACE {
         Descrição {
-            Todos os elementos estéticos do aplicativo devem ser componentizados de maneira isolada, permitindo que alterações na logo ou cores do IFAC sejam alteradas em um arquivo global de estilo, sem refatorar telas específicas.
+            Todos os elementos estéticos do site devem ser organizados através de folhas de estilo centralizadas ou pré-processadores, permitindo que alterações na logo ou cores do IFAC sejam modificadas em arquivos globais, sem refatorar páginas específicas.
         }
     } //Fim RNF22 ISOLAMENTO DE ESTILOS DA INTERFACE
 
@@ -172,58 +172,58 @@ Requisitos Não Funcionais {
 
     ID RNF23 CRIPTOGRAFIA DE DADOS EM TRÂNSITO {
         Descrição {
-            Toda a comunicação de rede estabelecida entre as aplicações cliente (Web/Mobile) e a base de dados do Firebase deve ser obrigatoriamente criptografada através do protocolo TLS 1.2 ou superior (HTTPS).
+            Toda a comunicação de rede estabelecida entre o navegador do cliente e o servidor web rodando PHP deve ser obrigatoriamente criptografada através do protocolo TLS 1.2 ou superior.
         }
     } //Fim RNF23 CRIPTOGRAFIA DE DADOS EM TRÂNSITO
 
 
     ID RNF24 RESTRIÇÃO POR MATRÍCULA INSTITUCIONAL {
         Descrição {
-            O fluxo de cadastro automático de novos usuários deve validar e restringir a criação de contas exclusivamente a códigos de matrícula institucionais ativos e válidos do IFAC, impedindo o registro de pessoas externas à comunidade acadêmica.
+            O fluxo de cadastro automático de novos usuários no site deve validar e restringir a criação de contas exclusivamente a códigos de matrícula institucionais ativos e válidos do IFAC no MySQL, impedindo o registro de pessoas externas à comunidade acadêmica.
         }
     } //Fim RNF24 RESTRIÇÃO POR MATRÍCULA INSTITUCIONAL
 
 
     ID RNF25 CONTROLE DE ACESSO BASEADO EM PAPÉIS {
         Descrição {
-            O sistema deve segmentar os privilégios operacionais através de regras rígidas no banco de dados (regras do Firestore), diferenciando de forma inequívoca os perfis de Alunos, Servidores e Administradores.
+            O backend em PHP deve segmentar os privilégios operacionais através de validações rígidas de sessão no servidor e níveis de acesso gravados no MySQL, diferenciando de forma inequívoca os perfis de Alunos, Servidores e Administradores.
         }
     } //Fim RNF25 CONTROLE DE ACESSO BASEADO EM PAPÉIS
 
 
     ID RNF26 EXPOSIÇÃO DE INFORMAÇÕES PESSOAIS {
         Descrição {
-            O sistema não deve exibir dados sensíveis dos usuários (como CPF, e-mail privado ou senhas) nas agendas de consulta pública; apenas o nome e o vínculo institucional serão visíveis para fins de transparência.
+            O site não deve exibir dados sensíveis dos usuários nas agendas de consulta pública; apenas o nome e o vínculo institucional extraídos do banco de dados serão visíveis para fins de transparência.
         }
     } //Fim RNF26 EXPOSIÇÃO DE INFORMAÇÕES PESSOAIS
 
 
-    ID RNF27 ARMAZENAMENTO SEGURO DE TOKENS {
+    ID RNF27 ARMAZENAMENTO SEGURO DE SESSÕES {
         Descrição {
-            Os tokens de autenticação gerados pelo Firebase Authentication no aplicativo mobile devem ser armazenados de forma segura utilizando o hardware do aparelho (Key Store no Android / Key Chain no iOS).
+            Os identificadores de sessão gerados pelo PHP para autenticação do usuário devem ser transmitidos e armazenados de forma segura nos navegadores através de cookies com as flags 'HttpOnly' e 'Secure' ativadas.
         }
-    } //Fim RNF27 ARMAZENAMENTO SEGURO DE TOKENS
+    } //Fim RNF27 ARMAZENAMENTO SEGURO DE SESSÕES
 
 
     ID RNF28 REQUISITOS DE COMPLEXIDADE DE SENHA {
         Descrição {
-            O fluxo de cadastro e alteração de credenciais deve impor uma política de senhas fortes, exigindo no mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, números e um caractere especial.
+            O fluxo de cadastro e alteração de credenciais no site deve impor uma política de senhas fortes, exigindo no mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, números e um caractere especial.
         }
     } //Fim RNF28 REQUISITOS DE COMPLEXIDADE DE SENHA
 
 
     ID RNF29 CONFORMIDADE COM A LGPD {
         Descrição {
-            O Reservaí deve apresentar telas explícitas para aceite de Termos de Uso e Política de Privacidade, incluindo uma funcionalidade para que o usuário requisite a exclusão definitiva de seu cadastro, em conformidade com a LGPD.
+            O site do Reservaí deve apresentar telas explícitas para aceite de Termos de Uso e Política de Privacidade, incluindo uma funcionalidade para que o usuário requisite a exclusão definitiva de seu cadastro do banco MySQL, em conformidade com a LGPD.
         }
     } //Fim RNF29 CONFORMIDADE COM A LGPD
 
 
-    ID RNF30 INTEGRAÇÃO SEGURA COM HARDWARE DE BIOMETRIA {
+    ID RNF30 INTEGRAÇÃO SEGURA COM AUTENTICAÇÃO DO USUÁRIO {
         Descrição {
-            O fluxo de check-in e check-out via biometria digital deve interagir exclusivamente com as APIs nativas do sistema operacional móvel, proibindo o aplicativo de capturar ou armazenar a imagem física da digital do usuário no Firebase.
+            O fluxo de validação de presença ou confirmação de check-in/check-out no site deve interagir exclusivamente com rotinas seguras baseadas na web, proibindo o armazenamento de dados sensíveis locais de biometria no servidor.
         }
-    } //Fim RNF30 INTEGRAÇÃO SEGURA COM HARDWARE DE BIOMETRIA
+    } //Fim RNF30 INTEGRAÇÃO SEGURA COM AUTENTICAÇÃO DO USUÁRIO
 
 
     // ==========================================
@@ -232,42 +232,42 @@ Requisitos Não Funcionais {
 
     ID RNF31 TEMPO DE RESPOSTA DAS CONSULTAS {
         Descrição {
-            A renderização das telas de listagem de espaços físicos e consulta de horários disponíveis na agenda não deve ultrapassar o limite de 2,0 segundos sob conexões de rede móvel estáveis.
+            A renderização das páginas de listagem de espaços físicos e consulta de horários disponíveis geradas pelos scripts PHP não deve ultrapassar o limite de 2,0 segundos sob conexões de internet estáveis.
         }
     } //Fim RNF31 TEMPO DE RESPOSTA DAS CONSULTAS
 
 
-    ID RNF32 CONSUMO LIMITE DE MEMÓRIA RAM {
+    ID RNF32 LIMITAÇÃO DE CONSUMO NO SERVIDOR {
         Descrição {
-            O aplicativo móvel executado em uso ativo contínuo ou em segundo plano não deve ultrapassar o teto máximo de consumo de 180MB de memória RAM do dispositivo móvel.
+            A execução simultânea das rotinas em PHP e as consultas SQL enviadas ao banco de dados não devem ultrapassar as cotas estabelecidas de memória RAM alocada no servidor por requisição web.
         }
-    } //Fim RNF32 CONSUMO LIMITE DE MEMÓRIA RAM
+    } //Fim RNF32 LIMITAÇÃO DE CONSUMO NO SERVIDOR
 
 
     ID RNF33 COMPRESSÃO DE ARQUIVOS DE MÍDIA {
         Descrição {
-            Imagens anexadas ao cadastro de espaços ou enviadas em relatórios de problemas devem ser compactadas via software antes do upload no Firebase Cloud Storage, limitando o arquivo a um tamanho máximo de 300KB.
+            Imagens anexadas ao cadastro de espaços ou enviadas em relatórios de problemas devem ser compactadas via PHP antes do salvamento definitivo no diretório do servidor, limitando o arquivo a um tamanho máximo de 300KB.
         }
     } //Fim RNF33 COMPRESSÃO DE ARQUIVOS DE MÍDIA
 
 
     ID RNF34 CAPACIDADE DE CONCORRÊNCIA DE ACESSOS {
         Descrição {
-            A arquitetura de dados baseada no Firestore deve suportar uma taxa operacional de pelo menos 200 consultas ou requisições de reserva simultâneas por minuto sem apresentar lentidão.
+            A arquitetura de dados baseada em PHP e MySQL deve suportar uma taxa operacional de pelo menos 200 consultas ou requisições de reserva simultâneas por minuto sem apresentar lentidão no carregamento das páginas.
         }
     } //Fim RNF34 CAPACIDADE DE CONCORRÊNCIA DE ACESSOS
 
 
-    ID RNF35 TAMANHO DO PACOTE DE INSTALAÇÃO MOBILE {
+    ID RNF35 OTIMIZAÇÃO DO CARREGAMENTO WEB {
         Descrição {
-            O tamanho final do arquivo binário gerado para a instalação do aplicativo (.apk ou .aab) disponível para download na Google Play Store não deve ser superior a 45MB.
+            O tamanho total dos scripts iniciais, folhas de estilo e imagens estruturais do site transferidos para o navegador na primeira requisição não deve ultrapassar 5MB, utilizando técnicas de minificação e cache de navegador.
         }
-    } //Fim RNF35 TAMANHO DO PACOTE DE INSTALAÇÃO MOBILE
+    } //Fim RNF35 OTIMIZAÇÃO DO CARREGAMENTO WEB
 
 
     ID RNF36 TAXA DE ATUALIZAÇÃO DO CHAT EM TEMPO REAL {
         Descrição {
-            As mensagens enviadas no chat interno entre os usuários e os administradores devem ser sincronizadas e exibidas na tela da contraparte em um tempo máximo de 1,5 segundos (Latência de Tempo Real).
+            As mensagens enviadas no chat interno entre os usuários e os administradores devem ser sincronizadas e exibidas na tela da contraparte em um tempo máximo de 1,5 segundos.
         }
     } //Fim RNF36 TAXA DE ATUALIZAÇÃO DO CHAT EM TEMPO REAL
 
@@ -276,44 +276,44 @@ Requisitos Não Funcionais {
     // BLOCO 6: CONFIABILIDADE E REGRAS DE PERSISTÊNCIA
     // ==========================================
 
-    ID RNF37 TAXA DE ATIVIDADE DOS SERVIÇOS EM NUVEM {
+    ID RNF37 TAXA DE ATIVIDADE DOS SERVIÇOS DO SERVIDOR {
         Descrição {
-            O ecossistema Reservaí e suas dependências diretas de nuvem do Firebase devem garantir um indicador de disponibilidade contínua (Uptime) de no mínimo 99,5% avaliado anualmente.
+            O servidor web e o banco de dados MySQL do Reservaí devem garantir um indicador de disponibilidade contínua (Uptime) de no mínimo 99,5% avaliado anualmente.
         }
-    } //Fim RNF37 TAXA DE ATIVIDADE DOS SERVIÇOS EM NUVEM
+    } //Fim RNF37 TAXA DE ATIVIDADE DOS SERVIÇOS DO SERVIDOR
 
 
     ID RNF38 PREVENÇÃO CONTRA RESERVAS DUPLICADAS {
         Descrição {
-            O motor de persistência do sistema deve utilizar transações atômicas (Transactions do Firebase) para impedir de forma absoluta que um mesmo espaço seja reservado por dois usuários diferentes no mesmo intervalo de tempo.
+            O motor de persistência desenvolvido em PHP deve utilizar transações atômicas nativas do MySQL para impedir de forma absoluta que um mesmo espaço seja reservado por dois usuários diferentes no mesmo intervalo de tempo.
         }
     } //Fim RNF38 PREVENÇÃO CONTRA RESERVAS DUPLICADAS
 
 
     ID RNF39 COMPORTAMENTO DIANTE DE QUEDA DE REDE {
         Descrição {
-            Em caso de perda súbita de conexão com a internet durante a navegação, o aplicativo deve notificar o usuário de forma clara, congelar as requisições temporariamente e impedir o travamento ou encerramento inesperado do software.
+            Em caso de perda súbita de conexão com a internet durante a navegação no site, os scripts JavaScript do frontend devem notificar o usuário de forma clara na página, bloqueando novas submissões de formulários até o reestabelecimento da rede.
         }
     } //Fim RNF39 COMPORTAMENTO DIANTE DE QUEDA DE REDE
 
 
-    ID RNF40 POLÍTICA DE RECONEXÃO AUTOMÁTICA {
+    ID RNF40 POLÍTICA DE RESILIÊNCIA DE CONEXÃO COM O BANCO {
         Descrição {
-            O aplicativo deve possuir rotinas automáticas de re-tentativa com espaçamento exponencial (Exponential Backoff) caso falte comunicação momentânea ao tentar persistir dados ou realizar um check-in.
+            O backend em PHP deve possuir tratamentos de erro robustos para tratar falhas momentâneas de comunicação com o MySQL, exibindo uma página de erro amigável ao invés de expor logs técnicos.
         }
-    } //Fim RNF40 POLÍTICA DE RECONEXÃO AUTOMÁTICA
+    } //Fim RNF40 POLÍTICA DE RESILIÊNCIA DE CONEXÃO COM O BANCO
 
 
     ID RNF41 BACKUP AUTOMATIZADO DA BASE DE DADOS {
         Descrição {
-            A base de dados estruturada no Firebase Firestore deve possuir uma rotina programada de backups lógicos completos automatizados uma vez ao dia, visando recuperação em cenários de desastres.
+            A base de dados estruturada no MySQL deve possuir uma rotina programada de backups automatizados salvos em local seguro uma vez ao dia, visando recuperação em cenários de desastres.
         }
     } //Fim RNF41 BACKUP AUTOMATIZADO DA BASE DE DADOS
 
 
     ID RNF42 SISTEMA DE FILA FIFO PARA LISTA DE ESPERA {
         Descrição {
-            O gerenciamento lógico da lista de espera para reservas de ambientes deve seguir estritamente o critério FIFO (First-In, First-Out), garantindo que a vaga liberada seja ofertada prioritariamente ao usuário mais antigo na fila.
+            O gerenciamento lógico da lista de espera para reservas de ambientes no MySQL deve seguir estritamente o critério FIFO (First-In, First-Out), utilizando a ordenação de carimbos de data/hora gravados pelo PHP para garantir a prioridade correta.
         }
     } //Fim RNF42 SISTEMA DE FILA FIFO PARA LISTA DE ESPERA
 
@@ -322,58 +322,58 @@ Requisitos Não Funcionais {
     // BLOCO 7: QUALIDADE DE CÓDIGO E CONTEXTO OPERACIONAL
     // ==========================================
 
-    ID RNF43 VELOCIDADE DE DISPARO DE NOTIFICAÇÕES {
+    ID RNF43 VELOCIDADE DE DISPARO DE NOTIFICAÇÕES POR E-MAIL {
         Descrição {
-            O envio de notificações push sobre confirmações, cancelamentos ou chamadas da lista de espera via Firebase Cloud Messaging deve atingir o dispositivo do usuário em até 10 segundos após o evento gerador.
+            O envio de e-mails ou alertas do site sobre confirmações, cancelamentos ou chamadas da lista de espera processados pelo PHP deve ser disparado e encaminhado ao servidor de correio institucional em até 10 segundos após o evento gerador.
         }
-    } //Fim RNF43 VELOCIDADE DE DISPARO DE NOTIFICAÇÕES
+    } //Fim RNF43 VELOCIDADE DE DISPARO DE NOTIFICAÇÕES POR E-MAIL
 
 
     ID RNF44 LOGS DE AUDITORIA ADMINISTRATIVA {
         Descrição {
-            Operações administrativas críticas (como aprovações manuais, exclusões de usuários ou bloqueios de espaços) devem gerar logs imutáveis com data, hora e identificador do executor na base de dados para futuras auditorias do IFAC.
+            Operações administrativas críticas feitas através do painel do site devem gerar registros de log imutáveis na tabela de auditoria do MySQL, contendo data, hora e o identificador do executor.
         }
     } //Fim RNF44 LOGS DE AUDITORIA ADMINISTRATIVA
 
 
-    ID RNF45 PADRONIZAÇÃO ESTÊTICA DE CÓDIGO {
+    ID RNF45 PADRONIZAÇÃO ESTÉTICA DE CÓDIGO {
         Descrição {
-            O código fonte desenvolvido em React Native e JavaScript/TypeScript deve adotar as regras estritas do ESLint e o guia de estilo Standard JS para simplificar a leitura por novos alunos desenvolvedores do IFAC.
+            O código fonte desenvolvido em PHP deve adotar guias de estilo consolidados de mercado para simplificar a leitura por novos alunos desenvolvedores do IFAC.
         }
     } //Fim RNF45 PADRONIZAÇÃO ESTÊTICA DE CÓDIGO
 
 
     ID RNF46 RASTREABILIDADE DE SPRINTS E ATIVIDADES {
         Descrição {
-            Qualquer alteração de arquitetura, refatoração de telas ou modificação de banco de dados do Reservaí deve estar vinculada e descrita em uma tarefa correspondente no quadro Kanban de desenvolvimento dos alunos.
+            Qualquer alteração de arquitetura, refatoração de páginas ou modificação no esquema de tabelas do MySQL do Reservaí deve estar vinculada e descrita em uma tarefa correspondente no quadro Kanban de desenvolvimento dos alunos.
         }
     } //Fim RNF46 RASTREABILIDADE DE SPRINTS E ATIVIDADES
 
 
     ID RNF47 COBERTURA DE TESTES AUTOMATIZADOS {
         Descrição {
-            Os módulos lógicos vitais da aplicação (como o motor que calcula colisões de horários e regras de agendamento) devem ser validados por testes unitários escritos com o framework Jest.
+            Os módulos lógicos vitais da aplicação no backend devem ser validados por testes automatizados escritos com o framework PHPUnit.
         }
     } //Fim RNF47 COBERTURA DE TESTES AUTOMATIZADOS
 
 
     ID RNF48 ARQUIVAMENTO HISTÓRICO DE DADOS {
         Descrição {
-            Reservas finalizadas, chats encerrados e avaliações de semestres letivos anteriores devem ser movidos anualmente para coleções históricas de arquivo morto, mantendo as consultas correntes ágeis.
+            Reservas finalizadas, chats encerrados e avaliações de semestres letivos anteriores devem ser transferidos anualmente de forma automatizada no MySQL para tabelas ou bases de dados históricas, mantendo as consultas correntes do site ágeis.
         }
     } //Fim RNF48 ARQUIVAMENTO HISTÓRICO DE DADOS
 
 
     ID RNF49 SINCRONIA HORÁRIA E FORMATOS INSTITUCIONAIS {
         Descrição {
-            O sistema deve operar em sincronia com o fuso horário oficial do Estado do Acre (GMT-5) e os formatos de exibição padrão do Brasil: datas em DD/MM/AAAA e horários em formato de 24 horas (HH:MM).
+            O site e o banco MySQL devem operar em sincronia com o fuso horário oficial do Estado do Acre (GMT-5) e os formatos de exibição padrão do Brasil: datas em DD/MM/AAAA e horários em formato de 24 horas (HH:MM).
         }
     } //Fim RNF49 SINCRONIA HORÁRIA E FORMATOS INSTITUCIONAIS
 
 
     ID RNF50 INDEPENDÊNCIA DE LICENCIAMENTO COMERCIAL {
         Descrição {
-            Todas as bibliotecas, frameworks e dependências de código de terceiros utilizadas no Reservaí devem possuir licenças permissivas de código aberto (como MIT ou Apache 2.0), impedindo cobranças financeiras futuras ao IFAC.
+            Todas as bibliotecas do ecossistema PHP e frameworks utilizados no site do Reservaí devem possuir licenças permissivas de código aberto, impedindo cobranças financeiras futuras ao IFAC.
         }
     } //Fim RNF50 INDEPENDÊNCIA DE LICENCIAMENTO COMERCIAL
 
