@@ -1,11 +1,11 @@
-/* CREATE DATABASE Reservaí;
+/* CREATE DATABASE IF NOT EXISTS Reservaí;
 USE Reservaí;
 
-CREATE TABLE User (
+CREATE TABLE IF NOT EXISTS User(
     registrationId INT PRIMARY KEY,
-    userCpf VARCHAR(11) NOT NULL,
+    userCpf VARCHAR(11) UNIQUE NOT NULL,
     userBirthDate DATE NOT NULL,
-    userEmail VARCHAR(100) NOT NULL,
+    userEmail VARCHAR(100) UNIQUE NOT NULL,
     userPassword VARCHAR(100) NOT NULL,
     userName VARCHAR(100) NOT NULL
 ); */
