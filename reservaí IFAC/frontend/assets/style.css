@@ -1,0 +1,622 @@
+/* =========================================================
+   Reservaí - IFAC | Estilos (Login / Cadastro)
+   Layout responsivo real (flexbox), sem escala/posicionamento
+   absoluto de página inteira — reproduz fielmente cores,
+   tipografia, espaçamentos e proporções do design no Figma.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --verde-1: rgb(28, 148, 46);
+  --verde-2: rgb(37, 118, 83);
+  --verde-solido: #3fa14c;
+  --cinza-fundo: #ebebeb;
+  --cinza-texto: #707070;
+  --cinza-claro: #d9d9d9;
+  --preto-texto: #050505;
+  --sombra-card: 0px 10px 40px 10px rgba(0, 0, 0, 0.25);
+  --sombra-botao: 0px 5px 10px 4px rgba(0, 0, 0, 0.25);
+  --sombra-input: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cinza-fundo);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.icon-header {
+  width: 40px;
+  height: 40px;         
+  object-fit: contain;  
+  display: block;       
+}
+
+.icon-form {
+  width: 30px;
+  height: 30px;         
+  object-fit: contain;  
+  display: block;  
+}
+
+.icon-toggle-senha {
+  width: 22px;
+  height: 22px;         
+  object-fit: contain;  
+  display: block;  
+}
+
+/* ---------- Cabeçalho (fixo no topo) ---------- */
+
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to right, var(--verde-1), var(--verde-2));
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 32px;
+  flex-wrap: wrap;
+}
+
+/* Empurra a página para baixo a altura do header, já que ele é
+   retirado do fluxo normal ao ficar fixo em telas pequenas com wrap */
+body {
+  padding-top: 0;
+}
+
+.head__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.head__logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.head__search {
+  flex: 1;
+  min-width: 160px;
+  max-width: 575px;
+  position: relative;
+}
+
+.head__search input {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 20px;
+  background: var(--cinza-claro);
+  box-shadow: var(--sombra-input);
+  padding: 0 50px 0 20px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+}
+
+.head__search button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  border-radius: 50%;
+}
+
+.head__search button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.head__search svg {
+  width: 20px;
+  height: 20px;
+}
+
+.head__nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.head__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.head__nav-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sombra-input);
+  flex-shrink: 0;
+}
+
+.head__nav-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--verde-solido);
+}
+
+.head__nav-text {
+  font-family: 'Doppio One', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.head__divider {
+  width: 0;
+  height: 36px;
+  border-left: 2px solid rgba(255, 255, 255, 0.55);
+  margin: 0 4px;
+}
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 22px;
+  box-shadow: var(--sombra-card);
+  width: 100%;
+  max-width: 560px;
+  padding: 32px 44px 40px;
+}
+
+.card__title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--preto-texto);
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.card__title--center {
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: var(--cinza-claro);
+  margin: 0 0 22px;
+}
+
+/* ---------- Campos de formulário ---------- */
+
+.field {
+  position: relative;
+  margin-bottom: 1px;
+}
+
+.field__label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--preto-texto);
+  margin-bottom: 6px;
+}
+
+.field__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field__icon {
+  position: absolute;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  color: var(--cinza-texto);
+  pointer-events: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.field input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 9px;
+  box-shadow: var(--sombra-input);
+  padding: 0 48px;
+  font-size: 16px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--preto-texto);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.field input::placeholder {
+  color: var(--cinza-texto);
+}
+
+.field input:focus {
+  border-color: var(--verde-solido);
+}
+
+.field input.input-erro {
+  border-color: #d64545;
+}
+
+.field__toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinza-texto);
+  padding: 0;
+  border-radius: 50%;
+}
+
+.field__toggle:hover {
+  color: var(--preto-texto);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.field__toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.field__erro {
+  display: block;
+  color: #d64545;
+  font-size: 13px;
+  margin-top: 6px;
+  min-height: 16px;
+}
+
+/* Campo de data — sem ícone próprio, usa o seletor nativo do navegador */
+.field input[type="date"] {
+  padding: 0 16px;
+}
+
+/* ---------- Gênero (radio pill) ---------- */
+
+.genero-group {
+  margin-bottom: 22px;
+}
+
+.genero-options {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.genero-pill {
+  flex: 1;
+  position: relative;
+}
+
+.genero-pill input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.genero-pill label {
+  display: block;
+  text-align: center;
+  padding: 11px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: #fff;
+  font-size: 15px;
+  color: var(--preto-texto);
+  cursor: pointer;
+  box-shadow: var(--sombra-input);
+  transition: 0.15s ease;
+}
+
+.genero-pill input:checked + label {
+  background: linear-gradient(to right, rgba(28, 148, 45, 0.38), rgba(37, 118, 83, 0.38));
+  border-color: var(--verde-solido);
+  font-weight: 600;
+}
+
+.genero-pill input:focus-visible + label {
+  outline: 2px solid var(--verde-solido);
+  outline-offset: 2px;
+}
+
+/* ---------- Lembrar de mim ---------- */
+
+.lembrar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 22px;
+}
+
+.lembrar input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--verde-solido);
+  cursor: pointer;
+}
+
+.lembrar label {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Botões ---------- */
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 26px auto 0;
+  height: 54px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, var(--verde-1), var(--verde-2));
+  box-shadow: var(--sombra-botao);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Links auxiliares ---------- */
+
+.aux-texto {
+  text-align: center;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 18px;
+}
+
+.aux-texto a,
+.link-verde {
+  color: var(--verde-solido);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.aux-texto a:hover,
+.link-verde:hover {
+  text-decoration: underline;
+}
+
+.separador-ou {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0;
+  color: var(--preto-texto);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.separador-ou::before,
+.separador-ou::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--cinza-claro);
+}
+
+.termos {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.termos strong {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Mensagem de status ---------- */
+
+.msg-status {
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.msg-status.show {
+  display: block;
+}
+
+.msg-status.erro {
+  background: #fdecec;
+  color: #b42323;
+  border: 1px solid #f3c2c2;
+}
+
+.msg-status.sucesso {
+  background: #e9f7ec;
+  color: #1c6b2a;
+  border: 1px solid #b9e3c2;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  background: linear-gradient(to right, var(--verde-1), var(--verde-2));
+  color: rgba(255, 255, 255, 0.85);
+  padding: 30px 32px 26px;
+  text-align: left;
+}
+ 
+.footer__links {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+ 
+.footer__links a {
+  font-family: 'Doppio One', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+ 
+.footer__links a:hover {
+  text-decoration: underline;
+}
+ 
+footer p {
+  margin: 0;
+  font-family: 'Doppio One', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+ 
+@media (max-width: 600px) {
+  .footer__links {
+    gap: 18px 24px;
+  }
+ 
+  .footer__links a {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 700px) {
+  .head {
+    justify-content: center;
+  }
+
+  .head__nav {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .head__search {
+    order: 3;
+    width: 100%;
+  }
+
+  .card {
+    padding: 26px 22px 32px;
+  }
+
+  main {
+    padding: 32px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .head__nav-text {
+    display: none;
+  }
+
+  .head__logo-img {
+    height: 36px;
+  }
+}
+
+/* Foco visível para acessibilidade */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--verde-solido);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
