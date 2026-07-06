@@ -18,7 +18,7 @@ Requisitos Funcionais {
         }
 
         Resultado {
-	O novo cadastro será salvo na base de dados e o usuário será redirecionado à tela principal. Caso contrário, será exibida uma mensagem descrevendo o erro.
+	        O novo cadastro será salvo na base de dados e o usuário será redirecionado à tela principal. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF01 CADASTRAR USUÁRIO
 
@@ -190,7 +190,7 @@ Requisitos Funcionais {
         }
 
         Ações {
-            Preencher os dados obrigatórios do ambiente (Nome, capacidade, localização) e salvar.
+            Acessar a tela de gerenciamento de espaços e acionar a opção cadastrar espaço.
         }
 
         Resultado {
@@ -413,7 +413,7 @@ Requisitos Funcionais {
     } //Fim RF21 CONSULTAR RESERVA DE ESPAÇO
 
 
-    ID RF22 CONSULTAR AGENDA DE RESERVAS DE ESPAÇO {
+    ID RF22 CONSULTAR AGENDA DE RESERVAS DE UM ESPAÇO {
         Descrição {
             Possibilita o usuário consultar a agenda de reservas de um espaço qualquer.
         }
