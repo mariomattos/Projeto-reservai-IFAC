@@ -413,9 +413,9 @@ Requisitos Funcionais {
     } //Fim RF21 CONSULTAR RESERVA DE ESPAÇO
 
 
-    ID RF22 CONSULTAR AGENDA DE RESERVAS DE UM ESPAÇO {
+    ID RF22 CONSULTAR AGENDA DE DIAS DISPONÍVEIS PARA RESERVA DE UM ESPAÇO {
         Descrição {
-            Possibilita o usuário consultar a agenda de reservas de um espaço qualquer.
+            Possibilita o usuário consultar a agenda de dias disponíveis para reserva de um espaço qualquer.
         }
 
         Restrições {
@@ -423,11 +423,11 @@ Requisitos Funcionais {
         }
 
         Ações {
-            Acessar a tela de reserva de algum espaço e acionar a opção consultar agenda de reservas de espaço.
+            Acessar a tela de reserva de algum espaço e acionar a opção consultar agenda de dias disponíveis.
         }
 
         Resultado {
-            Será exibida a agenda de reservas do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
+            Será exibida a agenda de dias disponíveis para reserva do espaço escolhido. Caso contrário, será exibida uma mensagem descrevendo o erro.
         }
     } //Fim RF22 CONSULTAR AGENDA DE RESERVAS DE ESPAÇO
 
