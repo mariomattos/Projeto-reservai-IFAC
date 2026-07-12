@@ -73,9 +73,12 @@ function inicializarLogin() {
   if (toggleSenha) alternarVisibilidadeSenha(toggleSenha, senha);
 
   // Mostra mensagem de sucesso se o usuário acabou de se cadastrar
+  // ou acabou de recuperar a conta (fluxo de "Esqueci minha senha").
   const params = new URLSearchParams(window.location.search);
   if (params.get('cadastro') === 'sucesso') {
     exibirMensagem(msgStatus, 'Conta criada com sucesso! Faça login para continuar.', 'sucesso');
+  } else if (params.get('recuperacao') === 'sucesso') {
+    exibirMensagem(msgStatus, 'Senha alterada com sucesso! Faça login com sua nova senha.', 'sucesso');
   }
 
   form.addEventListener('submit', async (evento) => {
