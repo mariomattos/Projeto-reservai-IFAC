@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | Reservaí - IFAC</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <header class="head">
+    <a href="login.html" class="head__brand" aria-label="Reservaí - Página inicial">
+      <img src="../images/logo-ifac.png" alt="Instituto Federal do Acre" class="head__logo-img" />
+    </a>
+
+    <form class="head__search" id="form-busca" role="search">
+      <input type="search" id="busca" name="busca" placeholder="Buscar..." autocomplete="off" />
+      <button type="submit" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M21 21l-4.3-4.3" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+
+    <nav class="head__nav" aria-label="Navegação principal">
+      <button type="button" class="head__nav-item" id="btn-reserve">
+          <img src="../icons/Task Planning.ico" alt="Ícone de reserva" class="icon-header">
+        <span class="head__nav-text">Reserve</span>
+      </button>
+
+      <a href="#" class="head__nav-item">
+          <img src="../icons/Calendar-Regular 5.ico" alt="Ícone de minhas reservas" class="icon-header">
+        <span class="head__nav-text">Minhas Reservas</span>
+      </a>
+
+      <a href="login.html" class="head__nav-item">
+        <img src="../icons/Account Test.ico" alt="Ícone de perfil" class="icon-header">
+        <span class="head__nav-text">Perfil</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1 class="card__title card__title--center">CADASTRO</h1>
+      <hr class="divider" />
+
+      <div id="msg-status" class="msg-status" role="status" aria-live="polite"></div>
+
+      <form id="form-cadastro" novalidate>
+        <div class="field">
+          <div class="field__input-wrap">
+            <span class="field__icon">
+              <img src="../icons/Pessoa.ico" alt="Ícone de pessoa" class="icon-form">
+            </span>
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" autocomplete="name" required />
+          </div>
+          <span id="erro-nome" class="field__erro"></span>
+        </div>
+
+        <div class="field">
+          <div class="field__input-wrap">
+            <span class="field__icon">
+              <img src="../icons/Email.ico" alt="Ícone de Email" class="icon-form">
+            </span>
+            <input type="email" id="email" name="email" placeholder="Endereço de Email" autocomplete="email" required />
+          </div>
+          <span id="erro-email" class="field__erro"></span>
+        </div>
+
+        <div class="field">
+          <div class="field__input-wrap">
+            <span class="field__icon">
+              <img src="../icons/Document Writer.ico" alt="Ícone de pessoa com documento" class="icon-form">
+            </span>
+            <input type="text" id="matricula" name="matricula" placeholder="Matrícula" inputmode="numeric" required />
+          </div>
+          <span id="erro-matricula" class="field__erro"></span>
+        </div>
+
+        <div class="field">
+          <div class="field__input-wrap">
+            <span class="field__icon">
+              <img src="../icons/Password.ico" alt="Ícone de cadeado" class="icon-form">
+            </span>
+            <input type="password" id="senha" name="senha" placeholder="Criar Senha" autocomplete="new-password" required />
+            <button type="button" class="field__toggle" id="toggle-senha" aria-label="Mostrar senha">
+              <img src="../icons/Ocultar Senha.ico" alt="Ícone de olho fechado" class="icon-toggle-senha" id="icone-olho-cadastro">
+            </button>
+          </div>
+          <span id="erro-senha" class="field__erro"></span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="nascimento">Data de nascimento</label>
+          <div class="field__input-wrap">
+            <input type="date" id="nascimento" name="nascimento" />
+          </div>
+        </div>
+
+        <div class="genero-group">
+          <label class="field__label">Gênero</label>
+          <div class="genero-options">
+            <div class="genero-pill">
+              <input type="radio" id="genero-f" name="genero" value="feminino" />
+              <label for="genero-f">Feminino</label>
+            </div>
+            <div class="genero-pill">
+              <input type="radio" id="genero-m" name="genero" value="masculino" checked />
+              <label for="genero-m">Masculino</label>
+            </div>
+            <div class="genero-pill">
+              <input type="radio" id="genero-o" name="genero" value="outro" />
+              <label for="genero-o">Outro</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn" id="btn-cadastrar">CRIAR CONTA</button>
+
+        <p class="aux-texto">
+          Já tem uma conta? <a href="login.html">Login aqui</a>.
+        </p>
+
+        <p class="termos">
+          Ao clicar em <strong>Criar conta</strong>, você concorda com nossos
+          <a href="#" class="link-verde">Termos</a> e
+          <a href="#" class="link-verde">Privacidade</a>.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__links">
+      <a href="#">Contato</a>
+      <a href="#">Termos de agendamento</a>
+      <a href="#">Informações gerais</a>
+    </div>
+    <p>Copyright © 2025-2026 reservar.crb.ifac.edu.br</p>
+    <p>Localizado em Av. Brasil, 920, Xavier Maia, Rio Branco-AC, CEP 69.903-068</p>
+  </footer>
+
+  <script src="../src/register.js"></script>
+  <script>
+    document.getElementById('form-busca').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const termo = document.getElementById('busca').value.trim();
+      if (termo) {
+        window.location.href = 'buscar.html?q=' + encodeURIComponent(termo);
+      }
+    });
+
+    // Botão "Reserve": só deve levar à página de reservas se o
+    // usuário estiver autenticado. Sem sessão real do back-end
+    // ainda, sempre redireciona para o login — troque a condição
+    // abaixo pela checagem de sessão que seu PHP fornecer.
+    document.getElementById('btn-reserve').addEventListener('click', function () {
+      const usuarioEstaLogado = false; // TODO: substituir pela checagem real de sessão
+      window.location.href = usuarioEstaLogado ? 'reserva.html' : 'login.html';
+    });
+  </script>
+</body>
+</html>
