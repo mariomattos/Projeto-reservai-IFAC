@@ -3,7 +3,6 @@ CREATE DATABASE IF NOT EXISTS Reservai;
 USE Reservai;
 
 -- 1. ESTRUTURA DE ESPAÇOS E ITENS
--- A ordem é importante: criamos primeiro a base (Space), depois o vínculo (Inventory) e então o Item
 
 -- Space: Define os locais físicos que podem ser reservados
 CREATE TABLE IF NOT EXISTS Space (
@@ -31,7 +30,8 @@ CREATE TABLE IF NOT EXISTS Item (
 );
 
 -- 2. ESTRUTURA DE USUÁRIOS (HERANÇA)
--- Tabela base que armazena os dados comuns de todos os tipos de usuários
+
+-- User: Tabela base que armazena os dados comuns de todos os tipos de usuários
 CREATE TABLE IF NOT EXISTS `User` (
     registrationId VARCHAR(25) PRIMARY KEY,
     userCpf VARCHAR(14) UNIQUE NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `User` (
     userName VARCHAR(100) NOT NULL
 );
 
--- Tabelas de especialização que herdam o ID do usuário principal
+-- Especializações que herdam o ID do usuário principal
 CREATE TABLE IF NOT EXISTS Administrator (
     registrationId VARCHAR(25) PRIMARY KEY,
     FOREIGN KEY (registrationId) REFERENCES `User`(registrationId) ON DELETE CASCADE
@@ -60,7 +60,8 @@ CREATE TABLE IF NOT EXISTS Teacher (
 );
 
 -- 3. GESTÃO DE RESERVAS
--- Tabela central que conecta o usuário ao espaço escolhido em um determinado período
+
+-- Booking: Conecta o usuário ao espaço escolhido em um período
 CREATE TABLE IF NOT EXISTS Booking (
     bookingId INT AUTO_INCREMENT PRIMARY KEY,
     bookingDate DATE NOT NULL,
@@ -71,9 +72,3 @@ CREATE TABLE IF NOT EXISTS Booking (
     FOREIGN KEY (registrationId) REFERENCES `User`(registrationId) ON DELETE CASCADE,
     FOREIGN KEY (spaceId) REFERENCES Space(spaceId) ON DELETE CASCADE
 );
-
--- 4. OTIMIZAÇÃO (ÍNDICES)
--- Índices criados para acelerar consultas frequentes de reserva
-CREATE INDEX idx_booking_date_time ON Booking (bookingDate, bookingStart, bookingEnd);
-CREATE INDEX idx_booking_user ON Booking (registrationId);
-CREATE INDEX idx_booking_space ON Booking (spaceId);
